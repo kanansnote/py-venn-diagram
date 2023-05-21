@@ -31,6 +31,8 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 
 ## Coding Solution
 
+I'll try to come up with Python or Javascript, and mostly Python seems to be the proper option as it's mainly used in data visualization projects.
+
 ## License
 
 Specifying the license under which the project is released. It's the MIT License.
