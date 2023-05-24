@@ -1,6 +1,4 @@
 # Venn Diagram - May 17, 2023
-# I want to write a venn diagram in python that indicates my interests,
-# skills and needs which eventually can help me to choose a career.
 
 import matplotlib
 matplotlib.use('Qt5Agg')
