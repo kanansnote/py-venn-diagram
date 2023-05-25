@@ -33,6 +33,11 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 
 I'll try to come up with Python that mostly seems to be the best option to use as a programming language in data visualization projects.
 
+## Used Parameters
+Interpreter: Python 3.11\
+IDE: PyCharm 2023.1.2 (Community Edition)\
+OS: Windows 11 & Ubuntu 23.04
+
 ## License
 
 Specifying the license under which the project is released. It's the MIT License.
