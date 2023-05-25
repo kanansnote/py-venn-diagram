@@ -31,7 +31,7 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 
 ## Coding Solution
 
-I'll try to come up with Python or Javascript, and mostly Python seems to be the proper option as it's mainly used in data visualization projects.
+I'll try to come up with Python that mostly seems to be the best option to use as a programming language in data visualization projects.
 
 ## License
 
