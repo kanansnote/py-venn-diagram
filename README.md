@@ -14,7 +14,11 @@ When the three circles overlap, it will give us a career option to choose. In th
 
 <img src="https://drive.google.com/uc?id=1vO_VJrk41y9Iz2JZS0Uy3w-sVCoe1Jzi" />
 
-## Cognitive Functions
+## Cognitive Functions (Needs Work)
+(Title)
+
+### Intersections
+
 By exploring the intersections of these circles, we unlock cognitive functions that showcases MBTI personality traits:
 
 - The intersection of the first and second circles gives rise to Fe, fostering empathy and harmonious interactions.
