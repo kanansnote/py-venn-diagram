@@ -20,7 +20,7 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 - The intersection of the first and second circles gives rise to Fe, fostering empathy and harmonious interactions.
 - The intersection of the second and third circles reveals Si, bringing attention to detail and practicality.
 - The intersection of the first and third circles uncovers Ti, promoting logical analysis and problem-solving.
-- Lastly, the intersection of all three circles represents Ne, encouraging innovation and exploration.
+- The intersection of all three circles represents Ne, encouraging innovation and exploration.
 
 <img src="https://drive.google.com/uc?id=1Y3RqKam8MWtvyzxP_ppNMba_LvNfosr4" />
 
@@ -33,7 +33,7 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 
 ## Coding Solution (Needs Work) 
 
-I'll try to come up with Python that mostly seems to be the best option to use as a programming language in data visualization projects.
+I'm considering using Python as my primary programming language for this data visualization project due to its versatility and popularity in this field. Currently, I utilize the `matplotlib` library to create circles that visually represent the relationships between given sets. 
 
 ## Tools & Environment
 Interpreter: Python 3.11\
