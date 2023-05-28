@@ -29,16 +29,16 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 - Holistic approach addressing financial, healthy, and communication needs.
 - Emphasis on empathy, attention to detail, logical analysis, and innovation.
 
-## Coding Solution
+## Coding Solution (Needs Work) 
 
 I'll try to come up with Python that mostly seems to be the best option to use as a programming language in data visualization projects.
 
-## Used Parameters
+## Tools & Environment
 Interpreter: Python 3.11\
 IDE: PyCharm 2023.1.2 (Community Edition)\
 OS: Windows 11 & Ubuntu 23.04
 
-## License
+## License (Needs Work) 
 
 Specifying the license under which the project is released. It's the MIT License.
 
