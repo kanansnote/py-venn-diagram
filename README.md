@@ -1,14 +1,16 @@
 # Welcome to my Venn Diagram!
 
-In this project I'll try to create a solution with configuring this diagram for visualizing of career path with involving MBTI Cognitive Functions.
+In this project I'll try to create a solution by configuring this diagram for visualizing of career path with involving MBTI Cognitive Functions.
 
 <img src="https://drive.google.com/uc?id=13WAcEf5QYzXnc5GwF26zYOI3BmL2MoGx" />
 
-Here three circles representing interests, skills, and needs that will intersect to form a unique blend:
+Here three circles representing interests, skills, and needs:
 
-- The first circle will represent artistic and philosophical interests, emphasizing creativity and deep thinking.
-- The second circle will showcase technical skills alongside nutritional expertise, demonstrating a multidisciplinary approach.
-- The third circle will encompass financial and healthy needs, emphasizing effective communication for holistic solutions.
+- Interests circle will represent artistic and philosophical interests, emphasizing creativity and deep thinking.
+- Skills circle will showcase technical skills alongside nutritional expertise, demonstrating a multidisciplinary approach.
+- Needs circle will encompass financial and healthy needs, emphasizing effective communication for holistic solutions.
+
+When the three circles overlap, it will give us a career option to choose. In this case, programming seems to be the best option to go with.
 
 <img src="https://drive.google.com/uc?id=1vO_VJrk41y9Iz2JZS0Uy3w-sVCoe1Jzi" />
 
