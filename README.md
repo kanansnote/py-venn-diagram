@@ -37,7 +37,7 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 
 ## Coding Solution (Needs Work) 
 
-I'm considering using Python as my primary programming language for this data visualization project due to its versatility and popularity in this field. Currently, I utilize the `matplotlib` library to create circles that visually represent the relationships between given sets. 
+I'm considering using Python as my primary programming language for this data visualization project due to its versatility and popularity in this field. Currently, I utilize the `PyQt5`, `matplotlib` library to create circles that visually represent the relationships between given sets. 
 
 ## Tools & Environment
 Interpreter: Python 3.11\
