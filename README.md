@@ -8,7 +8,7 @@ Here three circles representing interests, skills, and needs:
 
 - Interests circle will represent artistic and philosophical interests, emphasizing creativity and deep thinking.
 - Skills circle will showcase technical skills alongside nutritional expertise, demonstrating a multidisciplinary approach.
-- Needs circle will encompass financial and healthy needs, emphasizing effective communication for holistic solutions.
+- Needs circle will encompass financial and health needs, emphasizing effective communication for holistic solutions.
 
 When the three circles overlap, it will give us a career option to choose. In this case, programming seems to be the best option to go with.
 
@@ -32,7 +32,7 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 
 - Artistic and philosophical insights to drive innovative solutions.
 - Technical skills applied in conjunction with nutritional expertise.
-- Holistic approach addressing financial, healthy, and communication needs.
+- Holistic approach addressing financial, health, and communication needs.
 - Emphasis on empathy, attention to detail, logical analysis, and innovation.
 
 ## Coding Solution (Needs Work) 
