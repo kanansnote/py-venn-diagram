@@ -25,8 +25,8 @@ def create_skills_circle():
     ax.axis('off')
 
     # Add labels to each section
-    ax.text(0.3, 0.6, 'Technical')
-    ax.text(0.6, 0.5, 'Nutritional')
+    ax.text(0.25, 0.57, 'Technical')
+    ax.text(0.57, 0.38, 'Nutritional')
 
     # Set the title of the plot
     ax.set_title('Technical & Nutritional Skills')
