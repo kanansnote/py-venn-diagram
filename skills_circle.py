@@ -11,16 +11,12 @@ def create_skills_circle():
     ax = fig.add_subplot(111)
 
     # Create wedges to divide the circle into sections
-    wedge1 = Wedge((0.5, 0.5), 0.4, 0, 90, facecolor='red')
-    wedge2 = Wedge((0.5, 0.5), 0.4, 90, 180, facecolor='green')
-    wedge3 = Wedge((0.5, 0.5), 0.4, 180, 270, facecolor='blue')
-    wedge4 = Wedge((0.5, 0.5), 0.4, 270, 360, facecolor='yellow')
+    wedge1 = Wedge((0.5, 0.5), 0.4, 60, -120, facecolor='purple')
+    wedge2 = Wedge((0.5, 0.5), 0.4, -120, 60, facecolor='gray')
 
     # Add the wedges to the Axes
     ax.add_patch(wedge1)
     ax.add_patch(wedge2)
-    ax.add_patch(wedge3)
-    ax.add_patch(wedge4)
 
     # Set the aspect ratio of the Axes
     ax.set_aspect('equal')
@@ -29,13 +25,11 @@ def create_skills_circle():
     ax.axis('off')
 
     # Add labels to each section
-    ax.text(0.25, 0.65, 'Section 1')
-    ax.text(0.6, 0.65, 'Section 2')
-    ax.text(0.25, 0.3, 'Section 3')
-    ax.text(0.6, 0.3, 'Section 4')
+    ax.text(0.3, 0.6, 'Technical')
+    ax.text(0.6, 0.5, 'Nutritional')
 
     # Set the title of the plot
-    ax.set_title('Technical & Philosophical Skills')
+    ax.set_title('Technical & Nutritional Skills')
 
     # Create a PyQt5 widget to hold the Matplotlib figure
     canvas = FigureCanvas(fig)
