@@ -14,7 +14,6 @@ When the three circles overlap, it will give us a career option to choose. In th
 
 <img src="https://drive.google.com/uc?id=1vO_VJrk41y9Iz2JZS0Uy3w-sVCoe1Jzi" />
 
-###
 ## Cognitive Functions
 
 The project includes visualizations of using the MBTI cognitive functions. Here's a breakdown of the circles and their corresponding functions:
@@ -22,7 +21,6 @@ The project includes visualizations of using the MBTI cognitive functions. Here'
 - First Circle: Fi (Introverted Feeling) represents an individual's inner values and personal ethics.
 - Second Circle: Se (Extraverted Sensing) & Ni (Introverted Intuition). Se focuses on gathering concrete information from the environment in the present moment, while Ni helps recognize patterns and understand abstract concepts.
 - Third Circle: Te (Extraverted Thinking) involves organizing and structuring the external world, making logical decisions, and achieving goals.
-
 
 ### Intersections
 
@@ -42,7 +40,6 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 - Holistic approach addressing financial, health, and communication needs.
 - Emphasis on empathy, attention to detail, logical analysis, and innovation.
 
-###
 ## Coding Solution
 
 I'm considering using Python as my primary programming language for this data visualization project due to its versatility and popularity in this field. The project consists of multiple code files, each serving a specific purpose:
@@ -65,4 +62,3 @@ OS: `Windows 11` & `Ubuntu 23.04`
 ## License (Needs Work) 
 
 Specifying the license under which the project is released. It's the MIT License.
-
