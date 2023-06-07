@@ -26,10 +26,10 @@ The project includes visualizations of using the MBTI cognitive functions. Here'
 
 By exploring the intersections of these circles, we unlock cognitive functions that showcases MBTI personality traits:
 
-- The intersection of the first and second circles gives rise to Fe, fostering empathy and harmonious interactions.
-- The intersection of the second and third circles reveals Si, bringing attention to detail and practicality.
-- The intersection of the first and third circles uncovers Ti, promoting logical analysis and problem-solving.
-- The intersection of all three circles represents Ne, encouraging innovation and exploration.
+- The intersection of the first and second circles gives rise to Fe (Extraverted Feeling), fostering empathy and harmonious interactions.
+- The intersection of the second and third circles reveals Si (Introverted Sensing), bringing attention to detail and practicality.
+- The intersection of the first and third circles uncovers Ti (Introverted Thinking), promoting logical analysis and problem-solving.
+- The intersection of all three circles represents Ne (Extroverted Intuition), encouraging innovation and exploration.
 
 <img src="https://drive.google.com/uc?id=1Y3RqKam8MWtvyzxP_ppNMba_LvNfosr4" />
 
@@ -42,15 +42,12 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 
 ## Coding Solution
 
-I'm considering using Python as my primary programming language for this data visualization project due to its versatility and popularity in this field. The project consists of multiple code files, each serving a specific purpose:
+I'm considering using Python as my primary programming language for my data visualization project due to its versatility and popularity in this field. The project consists of multiple code files, each serving a specific purpose:
 
-- `main_window.py`: the main window implementation for the visualization project. It utilizes the `PyQt5` library for GUI development.
-- `all_three_circles.py`: creates a visualization with three circles, representing artistic and philosophical interests, technical and nutritional skills, and financial and healthy needs.
-- `interests_circle.py`: creates a visualization specifically focusing on artistic and philosophical interests.
-- `skills_circle.py`: creates a visualization specifically focusing on technical and nutritional skills.
-- `needs_circle.py`: creates a visualization specifically focusing on financial, health, and communication needs.
+- `main_window.py` is the main window implementation for the visualization project. It utilizes the `PyQt5` library for GUI development.
+- `all_three_circles.py` creates a visualization with three circles; `interests_circle.py` represents artistic and philosophical interests, `skills_circle.py` technical and nutritional skills, and `needs_circle.py` financial, health and communication needs.
 
-Each code file includes functions that generate the respective visualizations using the `Matplotlib` library. The visualizations are then rendered using `PyQt5` to display them as interactive widgets.
+Each code file includes functions that generate the respective visualizations using the `Matplotlib` library, which are then rendered using `PyQt5` to display them as interactive widgets.
 
 Feel free to explore the code files to understand the implementation details and how the visualizations are created.
 
