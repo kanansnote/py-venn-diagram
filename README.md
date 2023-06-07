@@ -35,7 +35,7 @@ By exploring the intersections of these circles, we unlock cognitive functions t
 
 <img src="https://drive.google.com/uc?id=1Y3RqKam8MWtvyzxP_ppNMba_LvNfosr4" />
 
-## Conclusion
+### Conclusion
 
 - Artistic and philosophical insights to drive innovative solutions.
 - Technical skills applied in conjunction with nutritional expertise.
