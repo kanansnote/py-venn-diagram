@@ -56,6 +56,10 @@ Interpreter: `Python 3.11`\
 IDE: `PyCharm 2023.1.2 (Community Edition)`\
 OS: `Windows 11` & `Ubuntu 23.04`
 
-## License (Needs Work) 
+## License
 
-Specifying the license under which the project is released. It's the MIT License.
+The project is licensed under the GNU Lesser General Public License (LGPL) version 2.1.
+
+The LGPL is a permissive open-source license that allows you to use, modify, and distribute the software, including linking it with non-free programs. It provides users with the freedom to share and change the software while protecting their rights.
+
+For more details, please refer to the [full text of the LGPL](https://github.com/kanansnote/My-Venn-Diagram/blob/main/LICENSE).
