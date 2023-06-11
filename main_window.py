@@ -6,6 +6,52 @@ from skills_circle import create_skills_circle
 from needs_circle import create_needs_circle
 
 
+def cancel():
+    QtWidgets.QApplication.quit()
+
+
+class IntroductionWindow(QtWidgets.QWidget):
+    def __init__(self, visualization_widget):
+        super().__init__()
+
+        self.visualization_widget = visualization_widget
+
+        # Set up the layout for the introduction page
+        layout = QtWidgets.QVBoxLayout(self)
+
+        # Add the heading label
+        heading_label = QtWidgets.QLabel("Welcome to My Venn Diagram!")
+        heading_label.setAlignment(QtCore.Qt.AlignCenter)
+        heading_font = heading_label.font()
+        heading_font.setPointSize(20)
+        heading_font.setBold(True)
+        heading_label.setFont(heading_font)
+        layout.addWidget(heading_label)
+
+        # Add the description label
+        description_label = QtWidgets.QLabel("Here I'm trying to visualize my career options "
+                                             "with three circles that represent different sets "
+                                             "and their intersections.")
+        description_label.setAlignment(QtCore.Qt.AlignCenter)
+        layout.addWidget(description_label)
+
+        # Add the buttons
+        button_layout = QtWidgets.QHBoxLayout()
+        layout.addLayout(button_layout)
+
+        start_button = QtWidgets.QPushButton("Start")
+        start_button.clicked.connect(self.start_visualization)
+        button_layout.addWidget(start_button)
+
+        cancel_button = QtWidgets.QPushButton("Cancel")
+        cancel_button.clicked.connect(cancel)
+        button_layout.addWidget(cancel_button)
+
+    def start_visualization(self):
+        self.hide()
+        self.visualization_widget.show()
+
+
 def create_visualization_1():
     # Create the first visualization using the imported function
     visualization_widget = create_all_three_circles()
@@ -96,8 +142,17 @@ class VisualizationWindow(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    window = VisualizationWindow()
+
+    visualization_window = VisualizationWindow()
+    introduction_window = IntroductionWindow(visualization_window)
+
     screen_geometry = QtWidgets.QApplication.desktop().availableGeometry()
-    window.resize(screen_geometry.width(), screen_geometry.height())
-    window.show()
+
+    visualization_window.resize(screen_geometry.width(), screen_geometry.height())
+    visualization_window.setWindowTitle("My Venn Diagram")
+
+    introduction_window.resize(screen_geometry.width(), screen_geometry.height())
+    introduction_window.setWindowTitle("Welcome to My Venn Diagram!")
+
+    introduction_window.show()
     app.exec_()
