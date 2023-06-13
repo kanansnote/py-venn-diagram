@@ -1,5 +1,6 @@
 import sys
 from PyQt5 import QtWidgets, QtCore
+from PyQt5.QtGui import QPixmap, QMovie
 from all_three_circles import create_all_three_circles
 from interests_circle import create_interests_circle
 from skills_circle import create_skills_circle
@@ -27,6 +28,21 @@ class IntroductionWindow(QtWidgets.QWidget):
         heading_font.setBold(True)
         heading_label.setFont(heading_font)
         layout.addWidget(heading_label)
+
+        # Add the image label
+        image_label = QtWidgets.QLabel()
+        image_label.setAlignment(QtCore.Qt.AlignCenter)
+        layout.addWidget(image_label)
+
+        # Load the GIF image using QMovie
+        gif_path = "full-circle.gif"  # Replace with the actual path to your GIF file
+        movie = QMovie(gif_path)
+
+        # Set the movie as the content of the label
+        image_label.setMovie(movie)
+
+        # Start playing the GIF
+        movie.start()
 
         # Add the description label
         description_label = QtWidgets.QLabel("Here I'm trying to visualize my career options "
@@ -152,7 +168,7 @@ if __name__ == "__main__":
     visualization_window.setWindowTitle("My Venn Diagram")
 
     introduction_window.resize(screen_geometry.width(), screen_geometry.height())
-    introduction_window.setWindowTitle("Welcome to My Venn Diagram!")
+    introduction_window.setWindowTitle("Intro")
 
     introduction_window.show()
     app.exec_()

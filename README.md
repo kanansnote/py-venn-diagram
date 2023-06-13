@@ -63,3 +63,8 @@ The project is licensed under the GNU Lesser General Public License (LGPL) versi
 The LGPL is a permissive open-source license that allows you to use, modify, and distribute the software, including linking it with non-free programs. It provides users with the freedom to share and change the software while protecting their rights.
 
 For more details, please refer to the [full text of the LGPL](https://github.com/kanansnote/My-Venn-Diagram/blob/main/LICENSE).
+
+## Links
+<div class="tenor-gif-embed" data-postid="4749604" data-share-method="host" data-aspect-ratio="1.78195" data-width="100%">
+    <a href="https://tenor.com/view/full-circle-olanrogers-youtube-gif-4749604">Full Circle GIF</a>
+</div>
