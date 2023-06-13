@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtGui import QPixmap, QMovie
+from PyQt5.QtGui import QMovie
 from all_three_circles import create_all_three_circles
 from interests_circle import create_interests_circle
 from skills_circle import create_skills_circle
