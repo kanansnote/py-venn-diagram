@@ -49,6 +49,9 @@ class IntroductionWindow(QtWidgets.QWidget):
                                              "with three circles that represent different sets "
                                              "and their intersections.")
         description_label.setAlignment(QtCore.Qt.AlignCenter)
+        description_font = description_label.font()
+        description_font.setPointSize(14)
+        description_label.setFont(description_font)
         layout.addWidget(description_label)
 
         # Add the buttons
@@ -56,10 +59,12 @@ class IntroductionWindow(QtWidgets.QWidget):
         layout.addLayout(button_layout)
 
         start_button = QtWidgets.QPushButton("Start")
+        start_button.setFixedSize(500, 40)  # Set the custom size (width, height)
         start_button.clicked.connect(self.start_visualization)
         button_layout.addWidget(start_button)
 
         cancel_button = QtWidgets.QPushButton("Cancel")
+        cancel_button.setFixedSize(500, 40)  # Set the custom size (width, height)
         cancel_button.clicked.connect(cancel)
         button_layout.addWidget(cancel_button)
 
@@ -162,12 +167,13 @@ if __name__ == "__main__":
     visualization_window = VisualizationWindow()
     introduction_window = IntroductionWindow(visualization_window)
 
-    screen_geometry = QtWidgets.QApplication.desktop().availableGeometry()
+    window_width = 1022
+    window_height = 523
 
-    visualization_window.resize(screen_geometry.width(), screen_geometry.height())
+    visualization_window.resize(window_width, window_height)
     visualization_window.setWindowTitle("My Venn Diagram")
 
-    introduction_window.resize(screen_geometry.width(), screen_geometry.height())
+    introduction_window.resize(window_width, window_height)
     introduction_window.setWindowTitle("Intro")
 
     introduction_window.show()
