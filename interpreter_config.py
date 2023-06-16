@@ -45,4 +45,3 @@ if __name__ == '__main__':
         modify_projectname_xml(projectname_xml_path, interpreter_name_custom)
         print('Modified projectname.xml')
 
-    # Your code follows...
