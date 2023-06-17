@@ -103,62 +103,82 @@ class VisualizationWindow(QtWidgets.QMainWindow):
 
         # Create a stacked widget to hold the different visualizations
         self.stacked_widget = QtWidgets.QStackedWidget()
-        self.stacked_widget.addWidget(create_visualization_1())
-        self.stacked_widget.addWidget(create_visualization_2())
-        self.stacked_widget.addWidget(create_visualization_3())
-        self.stacked_widget.addWidget(create_visualization_4())
 
-        # Set the stacked widget as the central widget of the window
+        # Create a widget for the buttons
+        buttons_widget = QtWidgets.QWidget()
+        buttons_layout = QtWidgets.QVBoxLayout(buttons_widget)
+        buttons_layout.setAlignment(QtCore.Qt.AlignCenter)
+        buttons_layout.addStretch(1)
+
+        # Create the buttons
+        all_three_circles_button = QtWidgets.QPushButton("All Three Circles")
+        all_three_circles_button.setFixedSize(200, 40)  # Set custom button size
+        all_three_circles_button.clicked.connect(lambda: self.show_page(0))
+        buttons_layout.addWidget(all_three_circles_button)
+
+        interests_circle_button = QtWidgets.QPushButton("Interests Circle")
+        interests_circle_button.setFixedSize(200, 40)  # Set custom button size
+        interests_circle_button.clicked.connect(lambda: self.show_page(1))
+        buttons_layout.addWidget(interests_circle_button)
+
+        skills_circle_button = QtWidgets.QPushButton("Skills Circle")
+        skills_circle_button.setFixedSize(200, 40)  # Set custom button size
+        skills_circle_button.clicked.connect(lambda: self.show_page(2))
+        buttons_layout.addWidget(skills_circle_button)
+
+        needs_circle_button = QtWidgets.QPushButton("Needs Circle")
+        needs_circle_button.setFixedSize(200, 40)  # Set custom button size
+        needs_circle_button.clicked.connect(lambda: self.show_page(3))
+        buttons_layout.addWidget(needs_circle_button)
+
+        buttons_layout.addStretch(1)
+
+        # Set the buttons widget as the central widget of the window
+        self.setCentralWidget(buttons_widget)
+
+        # Create back and next buttons
+        self.back_button = QtWidgets.QPushButton("Back")
+        self.back_button.clicked.connect(self.show_previous_page)
+        self.back_button.setVisible(False)  # Hide the button initially
+
+        self.next_button = QtWidgets.QPushButton("Next")
+        self.next_button.clicked.connect(self.show_next_page)
+        self.next_button.setVisible(False)  # Hide the button initially
+
+        # Add the buttons to the status bar
+        self.statusBar().addWidget(self.back_button)
+        self.statusBar().addWidget(self.next_button)
+
+    def show_page(self, index):
+        # Switch to the selected page in the stacked widget
+        if self.stacked_widget.count() == 0:
+            self.stacked_widget.addWidget(create_visualization_1())
+            self.stacked_widget.addWidget(create_visualization_2())
+            self.stacked_widget.addWidget(create_visualization_3())
+            self.stacked_widget.addWidget(create_visualization_4())
+
         self.setCentralWidget(self.stacked_widget)
+        self.stacked_widget.setCurrentIndex(index)
 
-        # Create a menu bar with separate menus for each visualization
-        menu_bar = self.menuBar()
+        # Show/hide back and next buttons based on the current page
+        self.update_navigation_buttons(index)
 
-        # Create a custom widget with a layout to center the menus
-        menu_widget = QtWidgets.QWidget()
-        menu_layout = QtWidgets.QHBoxLayout(menu_widget)
-        menu_layout.setContentsMargins(0, 0, 0, 0)
-        menu_layout.addStretch(1)
+    def show_previous_page(self):
+        current_index = self.stacked_widget.currentIndex()
+        if current_index > 0:
+            self.stacked_widget.setCurrentIndex(current_index - 1)
+            self.update_navigation_buttons(current_index - 1)
 
-        all_three_circles_action = QtWidgets.QAction("All Three Circles", self)
-        all_three_circles_action.triggered.connect(lambda: self.handle_menu_trigger(all_three_circles_action))
-        all_three_circles_button = QtWidgets.QToolButton()
-        all_three_circles_button.setDefaultAction(all_three_circles_action)
-        menu_layout.addWidget(all_three_circles_button)
+    def show_next_page(self):
+        current_index = self.stacked_widget.currentIndex()
+        if current_index < self.stacked_widget.count() - 1:
+            self.stacked_widget.setCurrentIndex(current_index + 1)
+            self.update_navigation_buttons(current_index + 1)
 
-        interests_circle_action = QtWidgets.QAction("Interests Circle", self)
-        interests_circle_action.triggered.connect(lambda: self.handle_menu_trigger(interests_circle_action))
-        interests_circle_button = QtWidgets.QToolButton()
-        interests_circle_button.setDefaultAction(interests_circle_action)
-        menu_layout.addWidget(interests_circle_button)
-
-        skills_circle_action = QtWidgets.QAction("Skills Circle", self)
-        skills_circle_action.triggered.connect(lambda: self.handle_menu_trigger(skills_circle_action))
-        skills_circle_button = QtWidgets.QToolButton()
-        skills_circle_button.setDefaultAction(skills_circle_action)
-        menu_layout.addWidget(skills_circle_button)
-
-        needs_circle_action = QtWidgets.QAction("Needs Circle", self)
-        needs_circle_action.triggered.connect(lambda: self.handle_menu_trigger(needs_circle_action))
-        needs_circle_button = QtWidgets.QToolButton()
-        needs_circle_button.setDefaultAction(needs_circle_action)
-        menu_layout.addWidget(needs_circle_button)
-
-        menu_layout.addStretch(1)
-
-        # Add the custom widget to the menu bar as a corner widget
-        menu_bar.setCornerWidget(menu_widget, QtCore.Qt.TopLeftCorner)
-
-    def handle_menu_trigger(self, action):
-        menu_text = action.text()
-        if menu_text == "All Three Circles":
-            self.stacked_widget.setCurrentIndex(0)
-        elif menu_text == "Interests Circle":
-            self.stacked_widget.setCurrentIndex(1)
-        elif menu_text == "Skills Circle":
-            self.stacked_widget.setCurrentIndex(2)
-        elif menu_text == "Needs Circle":
-            self.stacked_widget.setCurrentIndex(3)
+    def update_navigation_buttons(self, index):
+        # Show/hide back and next buttons based on the current index
+        self.back_button.setVisible(index > 0)
+        self.next_button.setVisible(index < self.stacked_widget.count() - 1)
 
 
 if __name__ == "__main__":
