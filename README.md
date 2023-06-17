@@ -58,11 +58,11 @@ OS: `Windows 11` & `Ubuntu 23.04`
 
 ## License
 
-The project is licensed under the GNU Lesser General Public License (LGPL) version 2.1.
+The project is licensed under the GNU General Public License (GPL) version 3.0.
 
-The LGPL is a permissive open-source license that allows you to use, modify, and distribute the software, including linking it with non-free programs. It provides users with the freedom to share and change the software while protecting their rights.
+The GPL is a popular open-source license that grants users the freedom to use, modify, and distribute the software. It ensures that any derivative works or modifications made to the software are also subject to the GPL, promoting the principles of openness and collaboration.
 
-For more details, please refer to the [full text of the LGPL](https://github.com/kanansnote/My-Venn-Diagram/blob/main/LICENSE).
+For more details, please refer to the [full text of the GPL](https://github.com/kanansnote/My-Venn-Diagram/blob/main/LICENSE).
 
 ## Links
 <div class="tenor-gif-embed" data-postid="4749604" data-share-method="host" data-aspect-ratio="1.78195" data-width="100%">
