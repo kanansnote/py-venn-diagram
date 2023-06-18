@@ -145,7 +145,7 @@ class VisualizationWindow(QtWidgets.QMainWindow):
         self.next_button.clicked.connect(self.show_next_page)
         self.next_button.setVisible(False)  # Hide the button initially
 
-        # Create the "Menu" button
+        # Create the menu button
         menu_button = QtWidgets.QPushButton("Menu")
         menu_button.clicked.connect(self.show_main_page)
 
@@ -154,7 +154,7 @@ class VisualizationWindow(QtWidgets.QMainWindow):
         self.statusBar().addWidget(self.back_button)
         self.statusBar().addWidget(self.next_button)
 
-        # Remove the "Menu" button from the status bar
+        # Remove the menu button from the status bar
         menu_button.setVisible(False)
 
     def show_page(self, index):
@@ -171,7 +171,7 @@ class VisualizationWindow(QtWidgets.QMainWindow):
         # Show/hide back and next buttons based on the current page
         self.update_navigation_buttons(index)
 
-        # Add a "Menu" button in the status bar before the "Next" button
+        # Add a menu button in the status bar before the next button
         menu_button = QtWidgets.QPushButton("Menu")
         menu_button.clicked.connect(self.show_main_page)
         self.statusBar().insertWidget(0, menu_button)
@@ -207,8 +207,10 @@ class VisualizationWindow(QtWidgets.QMainWindow):
 
         self.setCentralWidget(buttons_widget)
 
-        # Remove the "Menu" button from the status bar
+        # Remove the back, next and menu buttons from the status bar
         self.sender().setVisible(False)
+        self.back_button.setVisible(False)
+        self.next_button.setVisible(False)
 
     def show_previous_page(self):
         current_index = self.stacked_widget.currentIndex()
