@@ -145,9 +145,17 @@ class VisualizationWindow(QtWidgets.QMainWindow):
         self.next_button.clicked.connect(self.show_next_page)
         self.next_button.setVisible(False)  # Hide the button initially
 
-        # Add the buttons to the status bar
+        # Create the "Menu" button
+        menu_button = QtWidgets.QPushButton("Menu")
+        menu_button.clicked.connect(self.show_main_page)
+
+        # Add the buttons to the status bar in the desired order
+        self.statusBar().addWidget(menu_button)
         self.statusBar().addWidget(self.back_button)
         self.statusBar().addWidget(self.next_button)
+
+        # Remove the "Menu" button from the status bar
+        menu_button.setVisible(False)
 
     def show_page(self, index):
         # Switch to the selected page in the stacked widget
@@ -162,6 +170,45 @@ class VisualizationWindow(QtWidgets.QMainWindow):
 
         # Show/hide back and next buttons based on the current page
         self.update_navigation_buttons(index)
+
+        # Add a "Menu" button in the status bar before the "Next" button
+        menu_button = QtWidgets.QPushButton("Menu")
+        menu_button.clicked.connect(self.show_main_page)
+        self.statusBar().insertWidget(0, menu_button)
+
+    def show_main_page(self):
+        # Switch back to the main page with the four buttons
+        buttons_widget = QtWidgets.QWidget()
+        buttons_layout = QtWidgets.QVBoxLayout(buttons_widget)
+        buttons_layout.setAlignment(QtCore.Qt.AlignCenter)
+        buttons_layout.addStretch(1)
+
+        all_three_circles_button = QtWidgets.QPushButton("All Three Circles")
+        all_three_circles_button.setFixedSize(200, 40)
+        all_three_circles_button.clicked.connect(lambda: self.show_page(0))
+        buttons_layout.addWidget(all_three_circles_button)
+
+        interests_circle_button = QtWidgets.QPushButton("Interests Circle")
+        interests_circle_button.setFixedSize(200, 40)
+        interests_circle_button.clicked.connect(lambda: self.show_page(1))
+        buttons_layout.addWidget(interests_circle_button)
+
+        skills_circle_button = QtWidgets.QPushButton("Skills Circle")
+        skills_circle_button.setFixedSize(200, 40)
+        skills_circle_button.clicked.connect(lambda: self.show_page(2))
+        buttons_layout.addWidget(skills_circle_button)
+
+        needs_circle_button = QtWidgets.QPushButton("Needs Circle")
+        needs_circle_button.setFixedSize(200, 40)
+        needs_circle_button.clicked.connect(lambda: self.show_page(3))
+        buttons_layout.addWidget(needs_circle_button)
+
+        buttons_layout.addStretch(1)
+
+        self.setCentralWidget(buttons_widget)
+
+        # Remove the "Menu" button from the status bar
+        self.sender().setVisible(False)
 
     def show_previous_page(self):
         current_index = self.stacked_widget.currentIndex()
