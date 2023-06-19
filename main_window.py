@@ -76,24 +76,28 @@ class IntroductionWindow(QtWidgets.QWidget):
 def create_visualization_1():
     # Create the first visualization using the imported function
     visualization_widget = create_all_three_circles()
+    visualization_widget.setObjectName("All Three Circles")  # Set a unique object name
     return visualization_widget
 
 
 def create_visualization_2():
     # Create the second visualization using the imported function
     visualization_widget = create_interests_circle()
+    visualization_widget.setObjectName("Interests Circle")  # Set a unique object name
     return visualization_widget
 
 
 def create_visualization_3():
     # Create the third visualization using the imported function
     visualization_widget = create_skills_circle()
+    visualization_widget.setObjectName("Skills Circle")  # Set a unique object name
     return visualization_widget
 
 
 def create_visualization_4():
     # Create the fourth visualization using the imported function
     visualization_widget = create_needs_circle()
+    visualization_widget.setObjectName("Needs Circle")  # Set a unique object name
     return visualization_widget
 
 
@@ -104,113 +108,44 @@ class VisualizationWindow(QtWidgets.QMainWindow):
         # Create a stacked widget to hold the different visualizations
         self.stacked_widget = QtWidgets.QStackedWidget()
 
-        # Create a widget for the buttons
-        buttons_widget = QtWidgets.QWidget()
-        buttons_layout = QtWidgets.QVBoxLayout(buttons_widget)
-        buttons_layout.setAlignment(QtCore.Qt.AlignCenter)
-        buttons_layout.addStretch(1)
-
-        # Create the buttons
-        all_three_circles_button = QtWidgets.QPushButton("All Three Circles")
-        all_three_circles_button.setFixedSize(200, 40)  # Set custom button size
-        all_three_circles_button.clicked.connect(lambda: self.show_page(0))
-        buttons_layout.addWidget(all_three_circles_button)
-
-        interests_circle_button = QtWidgets.QPushButton("Interests Circle")
-        interests_circle_button.setFixedSize(200, 40)  # Set custom button size
-        interests_circle_button.clicked.connect(lambda: self.show_page(1))
-        buttons_layout.addWidget(interests_circle_button)
-
-        skills_circle_button = QtWidgets.QPushButton("Skills Circle")
-        skills_circle_button.setFixedSize(200, 40)  # Set custom button size
-        skills_circle_button.clicked.connect(lambda: self.show_page(2))
-        buttons_layout.addWidget(skills_circle_button)
-
-        needs_circle_button = QtWidgets.QPushButton("Needs Circle")
-        needs_circle_button.setFixedSize(200, 40)  # Set custom button size
-        needs_circle_button.clicked.connect(lambda: self.show_page(3))
-        buttons_layout.addWidget(needs_circle_button)
-
-        buttons_layout.addStretch(1)
-
-        # Set the buttons widget as the central widget of the window
-        self.setCentralWidget(buttons_widget)
-
         # Create back and next buttons
         self.back_button = QtWidgets.QPushButton("Back")
+        self.back_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.back_button.clicked.connect(self.show_previous_page)
         self.back_button.setVisible(False)  # Hide the button initially
 
         self.next_button = QtWidgets.QPushButton("Next")
+        self.next_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.next_button.clicked.connect(self.show_next_page)
-        self.next_button.setVisible(False)  # Hide the button initially
 
-        # Create the menu button
-        menu_button = QtWidgets.QPushButton("Menu")
-        menu_button.clicked.connect(self.show_main_page)
+        # Create a status bar
+        self.setStatusBar(QtWidgets.QStatusBar())
 
-        # Add the buttons to the status bar in the desired order
-        self.statusBar().addWidget(menu_button)
-        self.statusBar().addWidget(self.back_button)
-        self.statusBar().addWidget(self.next_button)
+        # Add the back button on the left corner and next button on the right corner of the status bar
+        self.statusBar().addPermanentWidget(self.back_button)
+        self.statusBar().addPermanentWidget(self.next_button)
 
-        # Remove the menu button from the status bar
-        menu_button.setVisible(False)
+        # Add the visualization pages to the stacked widget
+        self.stacked_widget.addWidget(create_visualization_1())
+        self.stacked_widget.addWidget(create_visualization_2())
+        self.stacked_widget.addWidget(create_visualization_3())
+        self.stacked_widget.addWidget(create_visualization_4())
+
+        # Set the first page as the current page
+        self.show_page(0)
 
     def show_page(self, index):
         # Switch to the selected page in the stacked widget
-        if self.stacked_widget.count() == 0:
-            self.stacked_widget.addWidget(create_visualization_1())
-            self.stacked_widget.addWidget(create_visualization_2())
-            self.stacked_widget.addWidget(create_visualization_3())
-            self.stacked_widget.addWidget(create_visualization_4())
-
         self.setCentralWidget(self.stacked_widget)
         self.stacked_widget.setCurrentIndex(index)
 
         # Show/hide back and next buttons based on the current page
         self.update_navigation_buttons(index)
 
-        # Add a menu button in the status bar before the next button
-        menu_button = QtWidgets.QPushButton("Menu")
-        menu_button.clicked.connect(self.show_main_page)
-        self.statusBar().insertWidget(0, menu_button)
-
-    def show_main_page(self):
-        # Switch back to the main page with the four buttons
-        buttons_widget = QtWidgets.QWidget()
-        buttons_layout = QtWidgets.QVBoxLayout(buttons_widget)
-        buttons_layout.setAlignment(QtCore.Qt.AlignCenter)
-        buttons_layout.addStretch(1)
-
-        all_three_circles_button = QtWidgets.QPushButton("All Three Circles")
-        all_three_circles_button.setFixedSize(200, 40)
-        all_three_circles_button.clicked.connect(lambda: self.show_page(0))
-        buttons_layout.addWidget(all_three_circles_button)
-
-        interests_circle_button = QtWidgets.QPushButton("Interests Circle")
-        interests_circle_button.setFixedSize(200, 40)
-        interests_circle_button.clicked.connect(lambda: self.show_page(1))
-        buttons_layout.addWidget(interests_circle_button)
-
-        skills_circle_button = QtWidgets.QPushButton("Skills Circle")
-        skills_circle_button.setFixedSize(200, 40)
-        skills_circle_button.clicked.connect(lambda: self.show_page(2))
-        buttons_layout.addWidget(skills_circle_button)
-
-        needs_circle_button = QtWidgets.QPushButton("Needs Circle")
-        needs_circle_button.setFixedSize(200, 40)
-        needs_circle_button.clicked.connect(lambda: self.show_page(3))
-        buttons_layout.addWidget(needs_circle_button)
-
-        buttons_layout.addStretch(1)
-
-        self.setCentralWidget(buttons_widget)
-
-        # Remove the back, next and menu buttons from the status bar
-        self.sender().setVisible(False)
-        self.back_button.setVisible(False)
-        self.next_button.setVisible(False)
+        # Show the name of the current visualization in the status bar
+        visualization_widget = self.stacked_widget.widget(index)
+        visualization_name = visualization_widget.objectName()
+        self.statusBar().showMessage(visualization_name)
 
     def show_previous_page(self):
         current_index = self.stacked_widget.currentIndex()
@@ -218,11 +153,21 @@ class VisualizationWindow(QtWidgets.QMainWindow):
             self.stacked_widget.setCurrentIndex(current_index - 1)
             self.update_navigation_buttons(current_index - 1)
 
+            # Show the name change for the current visualization in the status bar
+            visualization_widget = self.stacked_widget.widget(current_index - 1)
+            visualization_name = visualization_widget.objectName()
+            self.statusBar().showMessage(visualization_name)
+
     def show_next_page(self):
         current_index = self.stacked_widget.currentIndex()
         if current_index < self.stacked_widget.count() - 1:
             self.stacked_widget.setCurrentIndex(current_index + 1)
             self.update_navigation_buttons(current_index + 1)
+
+            # Show the name change for the current visualization in the status bar
+            visualization_widget = self.stacked_widget.widget(current_index + 1)
+            visualization_name = visualization_widget.objectName()
+            self.statusBar().showMessage(visualization_name)
 
     def update_navigation_buttons(self, index):
         # Show/hide back and next buttons based on the current index
@@ -239,11 +184,11 @@ if __name__ == "__main__":
     window_width = 1022
     window_height = 523
 
-    visualization_window.resize(window_width, window_height)
-    visualization_window.setWindowTitle("My Venn Diagram")
-
     introduction_window.resize(window_width, window_height)
     introduction_window.setWindowTitle("Intro")
+
+    visualization_window.resize(window_width, window_height)
+    visualization_window.setWindowTitle("My Venn Diagram")
 
     introduction_window.show()
     app.exec_()
