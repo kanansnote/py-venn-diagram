@@ -56,19 +56,22 @@ OS: `Windows 11` & `Ubuntu 23.04`
 
 ## Demonstrations
 
+## Demonstrations
+
 Here's how it will look using different OS versions:
 
 **Windows**
 
-![Introduction Window](./windows_introduction_window.gif)
-
-![Visualizations Window](./windows_visualizations_window.gif)
+| Introduction Window                                       | Visualizations Window                                         |
+|-----------------------------------------------------------|---------------------------------------------------------------|
+| ![Introduction Window](./windows_introduction_window.gif) | ![Visualizations Window](./windows_visualizations_window.gif) |
 
 **Ubuntu**
 
-![Ubuntu Introduction Window](./ubuntu_introduction_window.gif)
+| Introduction Window                                             | Visualizations Window                                               |
+|-----------------------------------------------------------------|---------------------------------------------------------------------|
+| ![Ubuntu Introduction Window](./ubuntu_introduction_window.gif) | ![Ubuntu Visualizations Window](./ubuntu_visualizations_window.gif) |
 
-![Ubuntu Visualizations Window](./ubuntu_visualizations_window.gif)
 
 ## License
 
