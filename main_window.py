@@ -184,11 +184,18 @@ if __name__ == "__main__":
     window_width = 1022
     window_height = 523
 
-    introduction_window.resize(window_width, window_height)
     introduction_window.setWindowTitle("Intro")
-
-    visualization_window.resize(window_width, window_height)
     visualization_window.setWindowTitle("My Venn Diagram")
+
+    # Set custom resolutions and center the windows on the screen
+    window_rect = QtWidgets.QStyle.alignedRect(
+        QtCore.Qt.LeftToRight,
+        QtCore.Qt.AlignCenter,
+        QtCore.QSize(window_width, window_height),
+        QtWidgets.QApplication.desktop().availableGeometry()
+    )
+    introduction_window.setGeometry(window_rect)
+    visualization_window.setGeometry(window_rect)
 
     introduction_window.show()
     app.exec_()
