@@ -2,6 +2,10 @@
 
 In this project, I'll try to create a solution by configuring this diagram for visualizing a career path with involving MBTI Cognitive Functions.
 
+The concept for this project was developed since January 2023, and the programming part started in May 2023. It's currently under development and a work in progress. 
+
+## Beginning
+
 <img src="https://drive.google.com/uc?id=13WAcEf5QYzXnc5GwF26zYOI3BmL2MoGx" />
 
 Here three circles represents these following components:
@@ -10,7 +14,7 @@ Here three circles represents these following components:
 - Skills circle showcases technical skills alongside nutritional expertise, demonstrating a multidisciplinary approach.
 - Needs circle encompasses financial and health needs, emphasizing effective communication for holistic solutions.
 
-When the three circles overlap, it will give us a career option to choose. In this case, programming seems to be the best option to go with.
+When the three circles overlap, it will give us a career option to choose. In this case, programming seems to be the best option to go with:
 
 <img src="https://drive.google.com/uc?id=1vO_VJrk41y9Iz2JZS0Uy3w-sVCoe1Jzi" />
 
@@ -56,8 +60,6 @@ OS: `Windows 11` & `Ubuntu 23.04`
 
 ## Demonstrations
 
-## Demonstrations
-
 Here's how it will look using different OS versions:
 
 **Windows**
@@ -85,3 +87,4 @@ For more details, please refer to the [full text of the GPL](https://github.com/
 <div class="tenor-gif-embed" data-postid="4749604" data-share-method="host" data-aspect-ratio="1.78195" data-width="100%">
     <a href="https://tenor.com/view/full-circle-olanrogers-youtube-gif-4749604">Full Circle GIF</a>
 </div>
+
