@@ -93,9 +93,9 @@ Each code file includes functions that generate the respective visualizations us
    </tr>
 </table>
 
-- Click the `Start` button to proceed to the **Visualization Window**. 
-- In the **Visualization Window**, you can explore different visualizations by clicking the `Next` and `Back` buttons in the status bar, as it will display the name of the current visualization on the left side corner. 
-- To exit the application, click the `Cancel` button in the Introduction Window or the `x` icon on both the Introduction and Visualization windows.
+- Click the `Start` button to proceed to the **Visualizations Window**. 
+- In the **Visualizations Window**, you can explore different visualizations by clicking the `Next` and `Back` buttons in the status bar, as it will display the name of the current visualization on the left side corner. 
+- To exit the application, click the `Cancel` button in the Introduction Window or the `x` icon on both the Introduction and Visualizations windows.
 
 ## Tools & Environment
 Interpreter: `Python 3.11`\
