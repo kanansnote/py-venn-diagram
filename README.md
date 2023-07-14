@@ -53,27 +53,54 @@ I'm considering using Python as my primary programming language for my data visu
 
 Each code file includes functions that generate the respective visualizations using the `Matplotlib` library, which are then rendered using `PyQt5` to display them as interactive widgets.
 
+## Usage
+
+1. Clone the project repository:
+    ```
+    git clone https://github.com/kanansnote/My-Venn-Diagram.git
+    ```
+
+2. Install the required dependencies. Ensure you have `PyQt5` installed:
+   ```
+   pip install pyqt5
+   ```
+3. Navigate to the project directory:
+   ```
+   cd My-Venn-Diagram
+   ```
+4. Run the project:
+   ```
+   python main.py
+   ```
+   
+5. The Introduction Window will appear, showing a welcome message, an animated GIF, and a description of the project. Here's how it will look using different OS versions:
+
+<table>
+   <tr>
+    <th>OS</th>
+    <th>Introduction Window</th>
+    <th>Visualizations Window</th>
+   </tr>
+   <tr>
+    <th>Windows</th>
+    <td><img src="./windows_introduction_window.gif" alt="Introduction Window"></td>
+    <td><img src="./windows_visualizations_window.gif" alt="Visualizations Window"></td>
+   </tr>
+   <tr>
+    <th>Ubuntu</th>
+    <td><img src="./ubuntu_introduction_window.gif" alt="Ubuntu Introduction Window"></td>
+    <td><img src="./ubuntu_visualizations_window.gif" alt="Ubuntu Visualizations Window"></td>
+   </tr>
+</table>
+
+- Click the `Start` button to proceed to the **Visualization Window**. 
+- In the **Visualization Window**, you can explore different visualizations by clicking the `Next` and `Back` buttons in the status bar, as it will display the name of the current visualization on the left side corner. 
+- To exit the application, click the `Cancel` button in the Introduction Window or the `x` icon on both the Introduction and Visualization windows.
+
 ## Tools & Environment
 Interpreter: `Python 3.11`\
 IDE: `PyCharm 2023.1.3 (Community Edition)`\
 OS: `Windows 11` & `Ubuntu 23.04`
-
-## Demonstrations
-
-Here's how it will look using different OS versions:
-
-**Windows**
-
-| Introduction Window                                       | Visualizations Window                                         |
-|-----------------------------------------------------------|---------------------------------------------------------------|
-| ![Introduction Window](./windows_introduction_window.gif) | ![Visualizations Window](./windows_visualizations_window.gif) |
-
-**Ubuntu**
-
-| Introduction Window                                             | Visualizations Window                                               |
-|-----------------------------------------------------------------|---------------------------------------------------------------------|
-| ![Ubuntu Introduction Window](./ubuntu_introduction_window.gif) | ![Ubuntu Visualizations Window](./ubuntu_visualizations_window.gif) |
-
 
 ## License
 
