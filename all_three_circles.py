@@ -1,5 +1,6 @@
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
+from matplotlib_venn import venn3
 
 
 def create_all_three_circles():
@@ -14,12 +15,11 @@ def create_all_three_circles():
     labels = ['Artistic & Philosophical Interests', 'Technical & Nutritional Skills', 'Financial & Healthy Needs']
 
     # Create the Venn diagram with three circles
-    from matplotlib_venn import venn3
     venn_diagram = venn3(subsets=(1, 1, 1, 1, 1, 1, 1), set_labels=labels, ax=ax)
 
     # Add labels to the intersections of the circles
     venn_diagram.get_label_by_id('100').set_text('Fi')
-    venn_diagram.get_label_by_id('010').set_text('Se & Ni')
+    venn_diagram.get_label_by_id('010').set_text('Se / Ni')
     venn_diagram.get_label_by_id('001').set_text('Te')
     venn_diagram.get_label_by_id('110').set_text('Fe')
     venn_diagram.get_label_by_id('011').set_text('Si')
