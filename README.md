@@ -99,7 +99,7 @@ Each code file includes functions that generate the respective visualizations us
 
 ## Tools & Environment
 Interpreter: `Python 3.11`\
-IDE: `PyCharm 2023.1.3 (Community Edition)`\
+IDE: `PyCharm 2023.1.4 (Community Edition)`\
 OS: `Windows 11` & `Ubuntu 23.04`
 
 ## License
