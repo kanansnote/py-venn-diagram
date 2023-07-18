@@ -1,14 +1,21 @@
 import sys
-from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtGui import QMovie
+import threading
+from PyQt5 import QtWidgets, QtCore, QtGui
 from all_three_circles import create_all_three_circles
 from interests_circle import create_interests_circle
 from skills_circle import create_skills_circle
 from needs_circle import create_needs_circle
+from pydub import AudioSegment
+from pydub.playback import play
 
 
 def cancel():
     QtWidgets.QApplication.quit()
+
+
+def play_audio_thread(audio_file_path):
+    audio = AudioSegment.from_mp3(audio_file_path)
+    play(audio)
 
 
 class IntroductionWindow(QtWidgets.QWidget):
@@ -20,6 +27,23 @@ class IntroductionWindow(QtWidgets.QWidget):
         # Set up the layout for the introduction page
         layout = QtWidgets.QVBoxLayout(self)
 
+        # Create a wrapper widget for the heading label
+        heading_wrapper = QtWidgets.QFrame()
+        heading_wrapper.setFixedSize(600, 100)  # Set the custom size (width, height)
+        heading_wrapper.setObjectName("HeadingWrapper")
+        heading_audio_layout = QtWidgets.QHBoxLayout(heading_wrapper)
+
+        # Add the audio button
+        audio_button = QtWidgets.QPushButton()
+        audio_button.setIcon(QtGui.QIcon("speaker.png"))  # Replace with the actual path to your speaker icon
+        audio_button.setIconSize(QtCore.QSize(40, 40))
+        audio_button.setFixedSize(40, 40)
+        audio_button.clicked.connect(self.play_audio)
+        heading_audio_layout.addWidget(audio_button)
+
+        # Add the heading wrapper to the main layout
+        layout.addWidget(heading_wrapper)
+
         # Add the heading label
         heading_label = QtWidgets.QLabel("Welcome to My Venn Diagram!")
         heading_label.setAlignment(QtCore.Qt.AlignCenter)
@@ -27,16 +51,19 @@ class IntroductionWindow(QtWidgets.QWidget):
         heading_font.setPointSize(20)
         heading_font.setBold(True)
         heading_label.setFont(heading_font)
-        layout.addWidget(heading_label)
+        heading_audio_layout.addWidget(heading_label)
 
         # Add the image label
+        image_layout = QtWidgets.QVBoxLayout()
+        layout.addLayout(image_layout)
+
         image_label = QtWidgets.QLabel()
         image_label.setAlignment(QtCore.Qt.AlignCenter)
-        layout.addWidget(image_label)
+        image_layout.addWidget(image_label)
 
         # Load the GIF image using QMovie
         gif_path = "full-circle.gif"  # Replace with the actual path to your GIF file
-        movie = QMovie(gif_path)
+        movie = QtGui.QMovie(gif_path)
 
         # Set the movie as the content of the label
         image_label.setMovie(movie)
@@ -54,7 +81,7 @@ class IntroductionWindow(QtWidgets.QWidget):
         description_label.setFont(description_font)
         layout.addWidget(description_label)
 
-        # Add the buttons
+        # Add the start and cancel buttons
         button_layout = QtWidgets.QHBoxLayout()
         layout.addLayout(button_layout)
 
@@ -67,6 +94,23 @@ class IntroductionWindow(QtWidgets.QWidget):
         cancel_button.setFixedSize(500, 40)  # Set the custom size (width, height)
         cancel_button.clicked.connect(cancel)
         button_layout.addWidget(cancel_button)
+
+        # Set up the media player for audio playback
+        self.audio_thread = None
+
+    def play_audio(self):
+        # Replace 'speaker.mp3' with the path to your audio file
+        audio_file_path = "speaker1.mp3"
+
+        if self.audio_thread and self.audio_thread.is_alive():
+            # Stop the previous audio thread if it's still running
+            self.audio_thread.join()
+
+        # Create a new thread for audio playback
+        self.audio_thread = threading.Thread(target=play_audio_thread, args=(audio_file_path,))
+        self.audio_thread.start()
+
+    # ... The rest of the code remains unchanged
 
     def start_visualization(self):
         self.hide()
