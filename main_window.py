@@ -27,31 +27,13 @@ class IntroductionWindow(QtWidgets.QWidget):
         # Set up the layout for the introduction page
         layout = QtWidgets.QVBoxLayout(self)
 
-        # Create a wrapper widget for the heading label
-        heading_wrapper = QtWidgets.QFrame()
-        heading_wrapper.setFixedSize(600, 100)  # Set the custom size (width, height)
-        heading_wrapper.setObjectName("HeadingWrapper")
-        heading_audio_layout = QtWidgets.QHBoxLayout(heading_wrapper)
-
         # Add the audio button
         audio_button = QtWidgets.QPushButton()
         audio_button.setIcon(QtGui.QIcon("speaker.png"))  # Replace with the actual path to your speaker icon
         audio_button.setIconSize(QtCore.QSize(40, 40))
         audio_button.setFixedSize(40, 40)
         audio_button.clicked.connect(self.play_audio)
-        heading_audio_layout.addWidget(audio_button)
-
-        # Add the heading wrapper to the main layout
-        layout.addWidget(heading_wrapper)
-
-        # Add the heading label
-        heading_label = QtWidgets.QLabel("Welcome to My Venn Diagram!")
-        heading_label.setAlignment(QtCore.Qt.AlignCenter)
-        heading_font = heading_label.font()
-        heading_font.setPointSize(20)
-        heading_font.setBold(True)
-        heading_label.setFont(heading_font)
-        heading_audio_layout.addWidget(heading_label)
+        layout.addWidget(audio_button)
 
         # Add the image label
         image_layout = QtWidgets.QVBoxLayout()
@@ -71,6 +53,22 @@ class IntroductionWindow(QtWidgets.QWidget):
         # Start playing the GIF
         movie.start()
 
+        # Create a wrapper widget for the heading and description labels
+        heading_description_wrapper = QtWidgets.QWidget()
+        heading_description_layout = QtWidgets.QVBoxLayout(heading_description_wrapper)
+
+        # Add the wrapper for the heading and description labels to the main layout
+        layout.addWidget(heading_description_wrapper, alignment=QtCore.Qt.AlignCenter)
+
+        # Add the heading label
+        heading_label = QtWidgets.QLabel("Welcome to My Venn Diagram!")
+        heading_label.setAlignment(QtCore.Qt.AlignCenter)
+        heading_font = heading_label.font()
+        heading_font.setPointSize(20)
+        heading_font.setBold(True)
+        heading_label.setFont(heading_font)
+        heading_description_layout.addWidget(heading_label, alignment=QtCore.Qt.AlignCenter)
+
         # Add the description label
         description_label = QtWidgets.QLabel("Here I'm trying to visualize my career options "
                                              "with three circles that represent different sets "
@@ -79,7 +77,9 @@ class IntroductionWindow(QtWidgets.QWidget):
         description_font = description_label.font()
         description_font.setPointSize(14)
         description_label.setFont(description_font)
-        layout.addWidget(description_label)
+        heading_description_layout.addWidget(description_label)
+
+        heading_description_layout.setSpacing(25)
 
         # Add the start and cancel buttons
         button_layout = QtWidgets.QHBoxLayout()
@@ -109,8 +109,6 @@ class IntroductionWindow(QtWidgets.QWidget):
         # Create a new thread for audio playback
         self.audio_thread = threading.Thread(target=play_audio_thread, args=(audio_file_path,))
         self.audio_thread.start()
-
-    # ... The rest of the code remains unchanged
 
     def start_visualization(self):
         self.hide()
