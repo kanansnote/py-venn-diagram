@@ -1,11 +1,12 @@
 import sys
-import threading
+
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
+
 from all_three_circles import create_all_three_circles
 from interests_circle import create_interests_circle
-from skills_circle import create_skills_circle
 from needs_circle import create_needs_circle
+from skills_circle import create_skills_circle
 
 
 def cancel():
