@@ -1,21 +1,15 @@
 import sys
 import threading
 from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from all_three_circles import create_all_three_circles
 from interests_circle import create_interests_circle
 from skills_circle import create_skills_circle
 from needs_circle import create_needs_circle
-from pydub import AudioSegment
-from pydub.playback import play
 
 
 def cancel():
     QtWidgets.QApplication.quit()
-
-
-def play_audio_thread(audio_file_path):
-    audio = AudioSegment.from_mp3(audio_file_path)
-    play(audio)
 
 
 class IntroductionWindow(QtWidgets.QWidget):
@@ -96,19 +90,16 @@ class IntroductionWindow(QtWidgets.QWidget):
         button_layout.addWidget(cancel_button)
 
         # Set up the media player for audio playback
-        self.audio_thread = None
+        self.media_player = QMediaPlayer()
 
     def play_audio(self):
         # Replace 'speaker.mp3' with the path to your audio file
         audio_file_path = "speaker1.mp3"
+        audio_url = QtCore.QUrl.fromLocalFile(audio_file_path)
+        audio_content = QMediaContent(audio_url)
 
-        if self.audio_thread and self.audio_thread.is_alive():
-            # Stop the previous audio thread if it's still running
-            self.audio_thread.join()
-
-        # Create a new thread for audio playback
-        self.audio_thread = threading.Thread(target=play_audio_thread, args=(audio_file_path,))
-        self.audio_thread.start()
+        self.media_player.setMedia(audio_content)
+        self.media_player.play()
 
     def start_visualization(self):
         self.hide()
