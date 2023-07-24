@@ -87,7 +87,7 @@ Each code file includes functions that generate the respective visualizations us
     <td><img src="./windows_visualizations_window.gif" alt="Visualizations Window"></td>
    </tr>
    <tr>
-    <th>Ubuntu</th>
+    <th>Debian</th>
     <td><img src="./ubuntu_introduction_window.gif" alt="Ubuntu Introduction Window"></td>
     <td><img src="./ubuntu_visualizations_window.gif" alt="Ubuntu Visualizations Window"></td>
    </tr>
@@ -100,7 +100,7 @@ Each code file includes functions that generate the respective visualizations us
 ## Tools & Environment
 Interpreter: `Python 3.11`\
 IDE: `PyCharm 2023.1.4 (Community Edition)`\
-OS: `Windows 11` & `Ubuntu 23.04`
+OS: `Windows 11` & `Debian 12`
 
 ## License
 
