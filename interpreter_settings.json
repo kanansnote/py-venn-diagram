@@ -1,5 +1,5 @@
 {
-  "ubuntu": {
+  "debian": {
     "interpreter_name": "Python 3.11",
     "interpreter_name_custom": "Python 3.11 (My-Venn-Diagram)"
   },
