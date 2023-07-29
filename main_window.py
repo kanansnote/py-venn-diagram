@@ -1,7 +1,8 @@
 import sys
 
+import pygame
 from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
+from PyQt5.QtMultimedia import QMediaPlayer
 
 from all_three_circles import create_all_three_circles
 from interests_circle import create_interests_circle
@@ -11,6 +12,15 @@ from skills_circle import create_skills_circle
 
 def cancel():
     QtWidgets.QApplication.quit()
+
+
+def play_audio():
+    # Replace 'speaker1.mp3' with the path to your audio file
+    audio_file_path = "speaker.mp3"
+
+    # Load and play the audio file using pygame
+    pygame.mixer.music.load(audio_file_path)
+    pygame.mixer.music.play()
 
 
 class IntroductionWindow(QtWidgets.QWidget):
@@ -27,7 +37,7 @@ class IntroductionWindow(QtWidgets.QWidget):
         audio_button.setIcon(QtGui.QIcon("speaker.png"))  # Replace with the actual path to your speaker icon
         audio_button.setIconSize(QtCore.QSize(40, 40))
         audio_button.setFixedSize(40, 40)
-        audio_button.clicked.connect(self.play_audio)
+        audio_button.clicked.connect(play_audio)
         layout.addWidget(audio_button)
 
         # Add the image label
@@ -93,14 +103,8 @@ class IntroductionWindow(QtWidgets.QWidget):
         # Set up the media player for audio playback
         self.media_player = QMediaPlayer()
 
-    def play_audio(self):
-        # Replace 'speaker.mp3' with the path to your audio file
-        audio_file_path = "speaker1.mp3"
-        audio_url = QtCore.QUrl.fromLocalFile(audio_file_path)
-        audio_content = QMediaContent(audio_url)
-
-        self.media_player.setMedia(audio_content)
-        self.media_player.play()
+        # Initialize pygame for audio playback
+        pygame.mixer.init(buffer=1024)
 
     def start_visualization(self):
         self.hide()
