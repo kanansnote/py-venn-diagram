@@ -73,23 +73,12 @@ Each code file includes functions that generate the respective visualizations us
    python main.py
    ```
    
-5. The Introduction Window will appear, showing a welcome message, an animated GIF, and a description of the project. Here's how it will look using different OS versions:
+5. The Introduction Window will appear, showing a welcome message, an animated GIF, and a description of the project. Here's how it will look:
 
 <table>
    <tr>
-    <th>OS</th>
-    <th>Introduction Window</th>
-    <th>Visualizations Window</th>
-   </tr>
-   <tr>
-    <th>Windows</th>
     <td><img src="./windows_introduction_window.gif" alt="Introduction Window"></td>
     <td><img src="./windows_visualizations_window.gif" alt="Visualizations Window"></td>
-   </tr>
-   <tr>
-    <th>Debian</th>
-    <td><img src="./ubuntu_introduction_window.gif" alt="Ubuntu Introduction Window"></td>
-    <td><img src="./ubuntu_visualizations_window.gif" alt="Ubuntu Visualizations Window"></td>
    </tr>
 </table>
 
@@ -99,7 +88,7 @@ Each code file includes functions that generate the respective visualizations us
 
 ## Tools & Environment
 Interpreter: `Python 3.11`\
-IDE: `PyCharm 2023.1.4 (Community Edition)`\
+IDE: `PyCharm 2023.2 (Community Edition)`\
 OS: `Windows 11` & `Debian 12`
 
 ## License
