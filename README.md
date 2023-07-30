@@ -77,8 +77,8 @@ Each code file includes functions that generate the respective visualizations us
 
 <table>
    <tr>
-    <td><img src="./windows_introduction_window.gif" alt="Introduction Window"></td>
-    <td><img src="./windows_visualizations_window.gif" alt="Visualizations Window"></td>
+    <td><img src="./media/windows_introduction_window.gif" alt="Introduction Window"></td>
+    <td><img src="./media/windows_visualizations_window.gif" alt="Visualizations Window"></td>
    </tr>
 </table>
 

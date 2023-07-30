@@ -16,7 +16,7 @@ def cancel():
 
 def play_audio():
     # Replace 'speaker1.mp3' with the path to your audio file
-    audio_file_path = "speaker.mp3"
+    audio_file_path = "media/speaker.mp3"
 
     # Load and play the audio file using pygame
     pygame.mixer.music.load(audio_file_path)
@@ -34,7 +34,7 @@ class IntroductionWindow(QtWidgets.QWidget):
 
         # Add the audio button
         audio_button = QtWidgets.QPushButton()
-        audio_button.setIcon(QtGui.QIcon("speaker.png"))  # Replace with the actual path to your speaker icon
+        audio_button.setIcon(QtGui.QIcon("media/speaker.png"))  # Replace with the actual path to your speaker icon
         audio_button.setIconSize(QtCore.QSize(40, 40))
         audio_button.setFixedSize(40, 40)
         audio_button.clicked.connect(play_audio)
@@ -49,7 +49,7 @@ class IntroductionWindow(QtWidgets.QWidget):
         image_layout.addWidget(image_label)
 
         # Load the GIF image using QMovie
-        gif_path = "full-circle.gif"  # Replace with the actual path to your GIF file
+        gif_path = "media/full-circle.gif"  # Replace with the actual path to your GIF file
         movie = QtGui.QMovie(gif_path)
 
         # Set the movie as the content of the label
