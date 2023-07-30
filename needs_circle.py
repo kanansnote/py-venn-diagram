@@ -1,6 +1,6 @@
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
-from matplotlib.patches import Wedge
+from matplotlib.patches import Wedge, Rectangle
 
 
 def create_needs_circle():
@@ -30,6 +30,21 @@ def create_needs_circle():
 
     # Set the title of the plot
     ax.set_title('Financial, Health & Communication Needs')
+
+    # Create a new Axes object for custom elements outside the main circle
+    ax_custom = fig.add_axes([0, 0, 1, 1], zorder=-1)  # [left, bottom, width, height]
+    ax_custom.axis('off')
+
+    # Create checkbox-like elements in the new Axes
+    checkbox1 = Rectangle((0.1, 0.7), 0.02, 0.03, facecolor='turquoise')
+    checkbox2 = Rectangle((0.1, 0.35), 0.02, 0.03, facecolor='yellow')
+
+    ax_custom.add_patch(checkbox1)
+    ax_custom.add_patch(checkbox2)
+
+    # Add text next to checkboxes
+    ax_custom.text(0.135, 0.712, 'Financial & Health', va='center')
+    ax_custom.text(0.135, 0.362, 'Communication', va='center')
 
     # Create a PyQt5 widget to hold the Matplotlib figure
     canvas = FigureCanvas(fig)
