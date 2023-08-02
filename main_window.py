@@ -14,6 +14,10 @@ def cancel():
     QtWidgets.QApplication.quit()
 
 
+def finish():
+    QtWidgets.QApplication.quit()
+
+
 def play_audio():
     # Replace 'speaker1.mp3' with the path to your audio file
     audio_file_path = "media/speaker.mp3"
@@ -146,7 +150,11 @@ class VisualizationWindow(QtWidgets.QMainWindow):
         # Create a stacked widget to hold the different visualizations
         self.stacked_widget = QtWidgets.QStackedWidget()
 
-        # Create back and next buttons
+        # Create finish, back and next buttons
+        self.finish_button = QtWidgets.QPushButton("Finish")
+        self.finish_button.setFixedSize(100, 40)  # Set the custom size (width, height)
+        self.finish_button.clicked.connect(finish)
+
         self.back_button = QtWidgets.QPushButton("Back")
         self.back_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.back_button.clicked.connect(self.show_previous_page)
@@ -162,6 +170,7 @@ class VisualizationWindow(QtWidgets.QMainWindow):
         # Add the back button on the left corner and next button on the right corner of the status bar
         self.statusBar().addPermanentWidget(self.back_button)
         self.statusBar().addPermanentWidget(self.next_button)
+        self.statusBar().addPermanentWidget(self.finish_button)
 
         # Add the visualization pages to the stacked widget
         self.stacked_widget.addWidget(create_visualization_1())

@@ -60,9 +60,9 @@ Each code file includes functions that generate the respective visualizations us
     git clone https://github.com/kanansnote/My-Venn-Diagram.git
     ```
 
-2. Install the required dependencies. Ensure you have `PyQt5` installed:
+2. Install the required dependencies. Ensure you have installed the libraries below:
    ```
-   pip install pyqt5
+   pip install pyqt5 pygame matplotlib matplotlib_venn
    ```
 3. Navigate to the project directory:
    ```
@@ -73,18 +73,32 @@ Each code file includes functions that generate the respective visualizations us
    python main.py
    ```
    
-5. The Introduction Window will appear, showing a welcome message, an animated GIF, and a description of the project. Here's how it will look:
+5. The **Introduction Window** will appear with showing a welcome message, an animated GIF, and a description of the project:
 
 <table>
    <tr>
-    <td><img src="./media/windows_introduction_window.gif" alt="Introduction Window"></td>
-    <td><img src="./media/windows_visualizations_window.gif" alt="Visualizations Window"></td>
+      <th>Introduction Window</th>
+   </tr>
+   <tr>
+      <td><img src="./media/windows_introduction_window.gif" alt="Introduction Window"></td>
    </tr>
 </table>
 
-- Click the `Start` button to proceed to the **Visualizations Window**. 
-- In the **Visualizations Window**, you can explore different visualizations by clicking the `Next` and `Back` buttons in the status bar, as it will display the name of the current visualization on the left side corner. 
-- To exit the application, click the `Cancel` button in the Introduction Window or the `x` icon on both the Introduction and Visualizations windows.
+Click the `Start` button to proceed to the **Visualizations Window**. To exit the application, click the `Cancel` button.
+
+6. In the **Visualizations Window**, you can explore the visualizations by the name of the current one on the left side corner:
+
+<table>
+   <tr>
+      <th>Visualizations Window</th>
+   </tr>
+   <tr>
+      <td><img src="./media/windows_visualizations_window.gif" alt="Visualizations Window"></td>
+   </tr>
+</table>
+
+Click the `Next` and `Back` buttons in the status bar to implement the navigation process with all the visualizations.
+Click the `Finish` button to end the visualization any time by closing the application.
 
 ## Tools & Environment
 Interpreter: `Python 3.11`\
