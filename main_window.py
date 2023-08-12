@@ -4,10 +4,10 @@ import pygame
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtMultimedia import QMediaPlayer
 
-from all_three_circles import create_all_three_circles
-from interests_circle import create_interests_circle
-from needs_circle import create_needs_circle
-from skills_circle import create_skills_circle
+from circles.all_three_circles import create_all_three_circles
+from circles.interests_circle import create_interests_circle
+from circles.needs_circle import create_needs_circle
+from circles.skills_circle import create_skills_circle
 
 
 def cancel():
@@ -25,6 +25,10 @@ def play_audio():
     # Load and play the audio file using pygame
     pygame.mixer.music.load(audio_file_path)
     pygame.mixer.music.play()
+
+    # Set the volume (0.0 = silent, 1.0 = full volume)
+    volume = 1  # Adjust this value as needed
+    pygame.mixer.music.set_volume(volume)
 
 
 class IntroductionWindow(QtWidgets.QWidget):
@@ -109,6 +113,9 @@ class IntroductionWindow(QtWidgets.QWidget):
 
         # Initialize pygame for audio playback
         pygame.mixer.init(buffer=1024)
+
+        # Disable the maximize button in the introduction window
+        self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowMaximizeButtonHint)
 
     def start_visualization(self):
         self.hide()
