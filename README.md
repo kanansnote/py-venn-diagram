@@ -102,7 +102,7 @@ Click the `Finish` button to end the visualization any time by closing the appli
 
 ## Tools & Environment
 Interpreter: `Python 3.11`\
-IDE: `PyCharm 2023.2 (Community Edition)`\
+IDE: `PyCharm 2023.2.1 (Community Edition)`\
 OS: `Windows 11` & `Debian 12`
 
 ## License
