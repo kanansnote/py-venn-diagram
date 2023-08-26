@@ -115,7 +115,9 @@ For more details, please refer to the [full text of the GPL](https://github.com/
 
 ## Links
 <div class="tenor-gif-embed" data-postid="4749604" data-share-method="host" data-aspect-ratio="1.78195" data-width="100%">
-    <a href="https://tenor.com/view/full-circle-olanrogers-youtube-gif-4749604">Full Circle GIF</a>
+   <a href="https://tenor.com/view/full-circle-olanrogers-youtube-gif-4749604">Full Circle GIF</a>
       <br>
-    <a href="https://icon-icons.com/icon/speaker-sound-volume/54138">Speaker Icon</a>
+   <a href="https://icon-icons.com/icon/speaker-sound-volume/54138">Speaker Icon</a>
+      <br>
+   <a href="https://academo.org/demos/venn-diagram-generator/">Venn Diagram Generator</a>
 </div>
