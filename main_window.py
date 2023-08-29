@@ -100,11 +100,19 @@ class IntroductionWindow(QtWidgets.QWidget):
 
         start_button = QtWidgets.QPushButton("Start")
         start_button.setFixedSize(500, 40)  # Set the custom size (width, height)
+
+        start_button.setIcon(QtGui.QIcon("media/start.png"))  # Replace with the actual path to your start icon
+        start_button.setIconSize(QtCore.QSize(20, 20))
+
         start_button.clicked.connect(self.start_visualization)
         button_layout.addWidget(start_button)
 
         cancel_button = QtWidgets.QPushButton("Cancel")
         cancel_button.setFixedSize(500, 40)  # Set the custom size (width, height)
+
+        cancel_button.setIcon(QtGui.QIcon("media/cancel.png"))  # Replace with the actual path to your start icon
+        cancel_button.setIconSize(QtCore.QSize(20, 20))
+
         cancel_button.clicked.connect(cancel)
         button_layout.addWidget(cancel_button)
 
@@ -159,15 +167,21 @@ class VisualizationWindow(QtWidgets.QMainWindow):
 
         # Create finish, back and next buttons
         self.finish_button = QtWidgets.QPushButton("Finish")
+        self.finish_button.setIcon(QtGui.QIcon("media/finish.png"))  # Replace with the actual path to your finish icon
+        self.finish_button.setIconSize(QtCore.QSize(20, 20))
         self.finish_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.finish_button.clicked.connect(finish)
 
         self.back_button = QtWidgets.QPushButton("Back")
+        self.back_button.setIcon(QtGui.QIcon("media/back.png"))  # Replace with the actual path to your back icon
+        self.back_button.setIconSize(QtCore.QSize(20, 20))
         self.back_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.back_button.clicked.connect(self.show_previous_page)
         self.back_button.setVisible(False)  # Hide the button initially
 
         self.next_button = QtWidgets.QPushButton("Next")
+        self.next_button.setIcon(QtGui.QIcon("media/next.png"))  # Replace with the actual path to your next icon
+        self.next_button.setIconSize(QtCore.QSize(20, 20))
         self.next_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.next_button.clicked.connect(self.show_next_page)
 

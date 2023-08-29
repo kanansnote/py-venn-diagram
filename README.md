@@ -53,6 +53,8 @@ I'm considering using Python as my primary programming language for my data visu
 
 Each code file includes functions that generate the respective visualizations using the `Matplotlib` library, which are then rendered using `PyQt5` to display them as interactive widgets.
 
+Additionally, `pygame` library is implemented in order to prevent any potential problems related with audio playback upon clicking the "speaker" icon.
+
 ## Usage
 
 1. Clone the project repository:
@@ -115,9 +117,40 @@ For more details, please refer to the [full text of the GPL](https://github.com/
 
 ## Links
 <div class="tenor-gif-embed" data-postid="4749604" data-share-method="host" data-aspect-ratio="1.78195" data-width="100%">
-   <a href="https://tenor.com/view/full-circle-olanrogers-youtube-gif-4749604">Full Circle GIF</a>
-      <br>
-   <a href="https://icon-icons.com/icon/speaker-sound-volume/54138">Speaker Icon</a>
-      <br>
-   <a href="https://academo.org/demos/venn-diagram-generator/">Venn Diagram Generator</a>
+   <table>
+      <td>
+         <a href="https://tenor.com/view/full-circle-olanrogers-youtube-gif-4749604">Full Circle GIF</a>
+      </td>
+      <td>
+         <a href="https://academo.org/demos/venn-diagram-generator/">Venn Diagram Generator</a>
+      </td>
+   </table>
+   <div class="Icon Links"><h3>Icon Links</h3>
+      <table>
+         <td>
+            <img src="media/speaker.png" height="10"/>
+            <a href="https://icon-icons.com/icon/speaker-sound-volume/54138">Speaker</a>
+         </td>
+         <td>
+            <img src="media/start.png" height="10"/>
+            <a href="https://icon-icons.com/icon/presentation-board-graph-chart/108631">Start</a>
+         </td>
+         <td>
+            <img src="media/cancel.png" height="10"/>
+            <a href="https://icon-icons.com/icon/cancel/73703">Cancel</a>
+         </td>
+         <td>
+            <img src="media/back.png" height="10"/>
+            <a href="https://icon-icons.com/icon/above-the-arrow/1049">Back</a>
+         </td>
+         <td>
+            <img src="media/next.png" height="10"/>
+            <a href="https://icon-icons.com/icon/Next-arrow/1058">Next</a>
+         </td>
+         <td>
+            <img src="media/finish.png" height="10"/>
+            <a href="https://www.iconarchive.com/show/farm-fresh-icons-by-fatcow/flag-finish-icon.html">Finish</a>
+         </td>
+      </table>
+   </div>
 </div>
