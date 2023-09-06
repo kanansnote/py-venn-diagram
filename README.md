@@ -115,18 +115,20 @@ The GPL is a popular open-source license that grants users the freedom to use, m
 
 For more details, please refer to the [full text of the GPL](https://github.com/kanansnote/My-Venn-Diagram/blob/main/LICENSE).
 
-## Links
-<div class="tenor-gif-embed" data-postid="4749604" data-share-method="host" data-aspect-ratio="1.78195" data-width="100%">
+## Additional Info
+<div class="Additional Info">
    <table>
-      <td>
-         <a href="https://tenor.com/view/full-circle-olanrogers-youtube-gif-4749604">Full Circle GIF</a>
-      </td>
-      <td>
-         <a href="https://academo.org/demos/venn-diagram-generator/">Venn Diagram Generator</a>
-      </td>
-   </table>
-   <div class="Icon Links"><h3>Icon Links</h3>
-      <table>
+      <tr>
+         <th colspan="2">Resources</th>
+         <th colspan="6">Icons</th>
+      </tr>
+      <tr>
+         <td>
+            <a href="https://academo.org/demos/venn-diagram-generator/">Venn Diagram Generator</a>
+         </td>
+         <td>
+            <a href="https://tenor.com/view/full-circle-olanrogers-youtube-gif-4749604">Full Circle GIF</a>
+         </td>
          <td>
             <img src="media/speaker.png" height="10"/>
             <a href="https://icon-icons.com/icon/speaker-sound-volume/54138">Speaker</a>
@@ -151,6 +153,6 @@ For more details, please refer to the [full text of the GPL](https://github.com/
             <img src="media/finish.png" height="10"/>
             <a href="https://www.iconarchive.com/show/farm-fresh-icons-by-fatcow/flag-finish-icon.html">Finish</a>
          </td>
-      </table>
-   </div>
+      </tr>
+   </table>
 </div>
