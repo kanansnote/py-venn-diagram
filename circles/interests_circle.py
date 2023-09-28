@@ -25,8 +25,10 @@ def create_interests_circle():
     ax.axis('off')
 
     # Add labels to each section
-    ax.text(0.22, 0.42, 'Philosophical')
-    ax.text(0.63, 0.55, 'Artistic')
+    ax.text(0.22, 0.52, 'Ethics')  # For Philosophical Label - Placing Up
+    ax.text(0.32, 0.32, 'Logic')  # For Philosophical Label - Placing Down
+
+    ax.text(0.63, 0.55, 'Music')  # For Artistic Label
 
     # Set the title of the plot
     ax.set_title('Artistic & Philosophical Interests')

@@ -25,8 +25,10 @@ def create_needs_circle():
     ax.axis('off')
 
     # Add labels to each section
-    ax.text(0.43, 0.67, 'Financial & Health')
-    ax.text(0.25, 0.33, 'Communication')
+    ax.text(0.35, 0.72, 'Healthy Eating')  # For Financial & Health Needs Label - Placing Up
+    ax.text(0.53, 0.54, 'Financial Freedom')  # For Financial & Health Needs Label - PLacing Down
+
+    ax.text(0.25, 0.33, 'Communication')  # For Communication Label
 
     # Set the title of the plot
     ax.set_title('Financial, Health & Communication Needs')
