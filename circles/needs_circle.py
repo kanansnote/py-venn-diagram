@@ -26,7 +26,7 @@ def create_needs_circle():
 
     # Add labels to each section
     ax.text(0.35, 0.72, 'Healthy Eating')  # For Financial & Health Needs Label - Placing Up
-    ax.text(0.53, 0.54, 'Financial Freedom')  # For Financial & Health Needs Label - PLacing Down
+    ax.text(0.53, 0.54, 'Financial Freedom')  # For Financial & Health Needs Label - Placing Down
 
     ax.text(0.25, 0.33, 'Communication')  # For Communication Label
 
