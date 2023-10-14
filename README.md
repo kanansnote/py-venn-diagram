@@ -55,12 +55,18 @@ Each code file includes functions that generate the respective visualizations us
 
 Additionally, `pygame` library is implemented in order to prevent any potential problems related with audio playback upon clicking the "**speaker**" icon.
 
+## Requirements
+
+- Python 3.x
+- PyQt5
+- Pygame
+
 ## Usage
 
 1. Clone the project repository:
-    ```
-    git clone https://github.com/kanansnote/My-Venn-Diagram.git
-    ```
+   ```
+   git clone https://github.com/kanansnote/My-Venn-Diagram.git
+   ```
 
 2. Install the required dependencies. Ensure you have installed the libraries below:
    ```
@@ -77,35 +83,33 @@ Additionally, `pygame` library is implemented in order to prevent any potential 
    
 5. The **Introduction Window** will appear with showing a welcome message, an animated GIF, and a description of the project:
 
-<table>
-   <tr>
-      <th>Introduction Window</th>
-   </tr>
-   <tr>
-      <td><img src="./media/windows_introduction_window.gif" alt="Introduction Window"></td>
-   </tr>
-</table>
-
+<div class="introductionWindow">
+   <table>
+      <tr>
+         <th>Introduction Window</th>
+      </tr>
+      <tr>
+         <td><img src="./media/windows_introduction_window.gif" alt="Introduction Window"></td>
+      </tr>
+   </table>
+</div>
 Click the `Start` button to proceed to the **Visualizations Window**. To exit the application, click the `Cancel` button.
 
 6. In the **Visualizations Window**, you can explore **the visualizations** by the name of the current one on the left side corner:
 
-<table>
-   <tr>
-      <th>Visualizations Window</th>
-   </tr>
-   <tr>
-      <td><img src="./media/windows_visualizations_window.gif" alt="Visualizations Window"></td>
-   </tr>
-</table>
+<div class="visualizationsWindow">
+   <table>
+      <tr>
+         <th>Visualizations Window</th>
+      </tr>
+      <tr>
+         <td><img src="./media/windows_visualizations_window.gif" alt="Visualizations Window"></td>
+      </tr>
+   </table>
+</div>
 
 Click the `Next` and `Back` buttons in the status bar to implement the navigation process with all the visualizations.
 Click the `Finish` button to end the visualization any time by closing the application.
-
-## Tools & Environment
-Interpreter: `Python 3.11`\
-IDE: `PyCharm 2023.2.2 (Community Edition)`\
-OS: `Windows 11` & `Debian 12`
 
 ## License
 
@@ -116,7 +120,7 @@ The project is licensed under the **GNU General Public License (GPL) version 3.0
 For more details, please refer to the [full text of the GPL](https://github.com/kanansnote/My-Venn-Diagram/blob/main/LICENSE).
 
 ## Additional Info
-<div class="Additional Info">
+<div class="additionalInfo">
    <table>
       <tr>
          <th colspan="2">Resources</th>
