@@ -12,7 +12,8 @@ def create_all_three_circles():
     ax.axis('off')
 
     # Set the labels for each circle
-    labels = ['Artistic & Philosophical Interests', 'Technical & Nutritional Skills', 'Financial & Healthy Needs']
+    labels = ['Artistic & Philosophical Interests', 'Technical & Nutritional Skills', 'Financial, Health & '
+                                                                                      'Communication Needs']
 
     # Create the Venn diagram with three circles
     venn_diagram = venn3(subsets=(1, 1, 1, 1, 1, 1, 1), set_labels=labels, ax=ax)

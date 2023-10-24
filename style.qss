@@ -1,0 +1,19 @@
+QLabel {
+    background-color: white;
+}
+
+QLabel#ImageLabel {
+    background-color: black;
+}
+
+QPushButton {
+    color: white;
+    background-color: #1D1D26;
+    font-size: 18px;
+}
+
+QPushButton:hover {
+    color: black;
+    background-color: #2ABf9E;
+    transition: color 0.8 ms;
+}

@@ -20,7 +20,7 @@ def finish():
 
 def play_audio():
     # Replace 'speaker1.mp3' with the path to your audio file
-    audio_file_path = "media/speaker.mp3"
+    audio_file_path = "media/buttons/speaker.mp3"
 
     # Load and play the audio file using pygame
     pygame.mixer.music.load(audio_file_path)
@@ -38,22 +38,14 @@ class IntroductionWindow(QtWidgets.QWidget):
         self.visualization_widget = visualization_widget
 
         # Set up the layout for the introduction page
-        layout = QtWidgets.QVBoxLayout(self)
-
-        # Add the audio button
-        audio_button = QtWidgets.QPushButton()
-        audio_button.setIcon(QtGui.QIcon("media/speaker.png"))  # Replace with the actual path to your speaker icon
-        audio_button.setIconSize(QtCore.QSize(40, 40))
-        audio_button.setFixedSize(40, 40)
-        audio_button.clicked.connect(play_audio)
-        layout.addWidget(audio_button)
+        layout = QtWidgets.QHBoxLayout(self)  # Change QVBoxLayout to QHBoxLayout
 
         # Add the image label
         image_layout = QtWidgets.QVBoxLayout()
         layout.addLayout(image_layout)
 
         image_label = QtWidgets.QLabel()
-        image_label.setAlignment(QtCore.Qt.AlignCenter)
+        image_label.setObjectName('ImageLabel')
         image_layout.addWidget(image_label)
 
         # Load the GIF image using QMovie
@@ -66,61 +58,72 @@ class IntroductionWindow(QtWidgets.QWidget):
         # Start playing the GIF
         movie.start()
 
-        # Create a wrapper widget for the heading and description labels
+        # Create a wrapper widget for the heading, description labels, and buttons
         heading_description_wrapper = QtWidgets.QWidget()
         heading_description_layout = QtWidgets.QVBoxLayout(heading_description_wrapper)
 
         # Add the wrapper for the heading and description labels to the main layout
         layout.addWidget(heading_description_wrapper, alignment=QtCore.Qt.AlignCenter)
 
-        # Add the heading label
-        heading_label = QtWidgets.QLabel("Welcome to My Venn Diagram!")
-        heading_label.setAlignment(QtCore.Qt.AlignCenter)
-        heading_font = heading_label.font()
-        heading_font.setPointSize(20)
-        heading_font.setBold(True)
-        heading_label.setFont(heading_font)
-        heading_description_layout.addWidget(heading_label, alignment=QtCore.Qt.AlignCenter)
-
-        # Add the description label
-        description_label = QtWidgets.QLabel("Here I'm trying to visualize my career options "
-                                             "with three circles that represent different sets "
-                                             "and their intersections.")
-        description_label.setAlignment(QtCore.Qt.AlignCenter)
-        description_font = description_label.font()
-        description_font.setPointSize(14)
-        description_label.setFont(description_font)
-        heading_description_layout.addWidget(description_label)
-
-        heading_description_layout.setSpacing(25)
-
-        # Add the start and cancel buttons
-        button_layout = QtWidgets.QHBoxLayout()
-        layout.addLayout(button_layout)
-
-        start_button = QtWidgets.QPushButton("Start")
-        start_button.setFixedSize(500, 40)  # Set the custom size (width, height)
-
-        start_button.setIcon(QtGui.QIcon("media/start.png"))  # Replace with the actual path to your start icon
-        start_button.setIconSize(QtCore.QSize(20, 20))
-
-        start_button.clicked.connect(self.start_visualization)
-        button_layout.addWidget(start_button)
-
-        cancel_button = QtWidgets.QPushButton("Cancel")
-        cancel_button.setFixedSize(500, 40)  # Set the custom size (width, height)
-
-        cancel_button.setIcon(QtGui.QIcon("media/cancel.png"))  # Replace with the actual path to your start icon
-        cancel_button.setIconSize(QtCore.QSize(20, 20))
-
-        cancel_button.clicked.connect(cancel)
-        button_layout.addWidget(cancel_button)
+        # Add the audio button
+        audio_button = QtWidgets.QPushButton()
+        audio_button.setIcon(QtGui.QIcon("media/buttons/speaker.png"))
+        audio_button.setIconSize(QtCore.QSize(40, 40))
+        audio_button.setFixedSize(40, 40)
+        audio_button.clicked.connect(play_audio)
+        heading_description_layout.addWidget(audio_button, alignment=QtCore.Qt.AlignCenter)
 
         # Set up the media player for audio playback
         self.media_player = QMediaPlayer()
 
         # Initialize pygame for audio playback
         pygame.mixer.init(buffer=1024)
+
+        # Add the heading label
+        heading_label = QtWidgets.QLabel("Welcome to My Venn Diagram!")
+        heading_font = heading_label.font()
+        heading_font.setPointSize(20)
+        heading_font.setBold(True)
+        heading_label.setFont(heading_font)
+
+        # Reduce spacing between widgets in layout
+        heading_description_layout.setSpacing(40)  # Adjust this value as needed
+
+        heading_description_layout.addWidget(heading_label)
+
+        # Add the description label
+        description_label = QtWidgets.QLabel("Here I'm trying to visualize my career options "
+                                             "with three circles that represent different sets "
+                                             "and their intersections.")
+        description_font = description_label.font()
+        description_font.setPointSize(14)
+        description_label.setFont(description_font)
+        description_label.setWordWrap(True)
+        description_label.setAlignment(QtCore.Qt.AlignCenter)
+        heading_description_layout.addWidget(description_label)
+
+        # Add the start and cancel buttons
+        button_layout = QtWidgets.QHBoxLayout()
+        button_layout.setSpacing(5)  # Adjust this value as needed
+        heading_description_layout.addLayout(button_layout)  # Add buttons to heading_description_layout
+
+        start_button = QtWidgets.QPushButton(" Start")
+        start_button.setFixedSize(100, 40)
+
+        start_button.setIcon(QtGui.QIcon("media/buttons/start.png"))
+        start_button.setIconSize(QtCore.QSize(20, 20))
+
+        start_button.clicked.connect(self.start_visualization)
+        button_layout.addWidget(start_button)
+
+        cancel_button = QtWidgets.QPushButton(" Cancel")
+        cancel_button.setFixedSize(100, 40)
+
+        cancel_button.setIcon(QtGui.QIcon("media/buttons/cancel.png"))
+        cancel_button.setIconSize(QtCore.QSize(20, 20))
+
+        cancel_button.clicked.connect(cancel)
+        button_layout.addWidget(cancel_button)
 
         # Disable the maximize button in the introduction window
         self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowMaximizeButtonHint)
@@ -166,21 +169,21 @@ class VisualizationWindow(QtWidgets.QMainWindow):
         self.stacked_widget = QtWidgets.QStackedWidget()
 
         # Create finish, back and next buttons
-        self.finish_button = QtWidgets.QPushButton("Finish")
-        self.finish_button.setIcon(QtGui.QIcon("media/finish.png"))  # Replace with the actual path to your finish icon
+        self.finish_button = QtWidgets.QPushButton(" Finish")
+        self.finish_button.setIcon(QtGui.QIcon("media/buttons/finish.png"))
         self.finish_button.setIconSize(QtCore.QSize(20, 20))
         self.finish_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.finish_button.clicked.connect(finish)
 
-        self.back_button = QtWidgets.QPushButton("Back")
-        self.back_button.setIcon(QtGui.QIcon("media/back.png"))  # Replace with the actual path to your back icon
+        self.back_button = QtWidgets.QPushButton(" Back")
+        self.back_button.setIcon(QtGui.QIcon("media/buttons/back.png"))
         self.back_button.setIconSize(QtCore.QSize(20, 20))
         self.back_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.back_button.clicked.connect(self.show_previous_page)
         self.back_button.setVisible(False)  # Hide the button initially
 
-        self.next_button = QtWidgets.QPushButton("Next")
-        self.next_button.setIcon(QtGui.QIcon("media/next.png"))  # Replace with the actual path to your next icon
+        self.next_button = QtWidgets.QPushButton(" Next")
+        self.next_button.setIcon(QtGui.QIcon("media/buttons/next.png"))
         self.next_button.setIconSize(QtCore.QSize(20, 20))
         self.next_button.setFixedSize(100, 40)  # Set the custom size (width, height)
         self.next_button.clicked.connect(self.show_next_page)
@@ -249,8 +252,11 @@ if __name__ == "__main__":
     visualization_window = VisualizationWindow()
     introduction_window = IntroductionWindow(visualization_window)
 
-    window_width = 1022
+    window_width = 970
     window_height = 523
+
+    visualization_window.setFixedSize(970, 523)
+    introduction_window.setFixedSize(970, 523)
 
     introduction_window.setWindowTitle("Intro")
     visualization_window.setWindowTitle("My Venn Diagram")
@@ -264,6 +270,10 @@ if __name__ == "__main__":
     )
     introduction_window.setGeometry(window_rect)
     visualization_window.setGeometry(window_rect)
+
+    # Load the stylesheet
+    with open("style.qss", "r") as f:
+        app.setStyleSheet(f.read())
 
     introduction_window.show()
     app.exec_()
