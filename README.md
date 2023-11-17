@@ -63,7 +63,7 @@ Additionally, `pygame` library is implemented in order to prevent any potential 
 
 ## Usage
 
-1. Clone the project repository:
+1. Clone the project repository to your IDE:
    ```
    git clone https://github.com/kanansnote/My-Venn-Diagram.git
    ```
@@ -72,16 +72,13 @@ Additionally, `pygame` library is implemented in order to prevent any potential 
    ```
    pip install pyqt5 pygame matplotlib matplotlib_venn
    ```
-3. Navigate to the project directory:
-   ```
-   cd My-Venn-Diagram
-   ```
-4. Run the project:
+   
+3. Run the project:
    ```
    python main_window.py
    ```
    
-5. The **Introduction Window** will appear with showing a welcome message, an animated GIF, and a description of the project:
+4. The **Introduction Window** will appear with showing a welcome message, an animated GIF, and a description of the project:
 
 <div class="introductionWindow">
    <table>
@@ -95,7 +92,7 @@ Additionally, `pygame` library is implemented in order to prevent any potential 
 </div>
 Click the `Start` button to proceed to the **Visualizations Window**. To exit the application, click the `Cancel` button.
 
-6. In the **Visualizations Window**, you can explore **the visualizations** by the name of the current one on the left side corner:
+5. In the **Visualizations Window**, you can explore **the visualizations** by the name of the current one on the left side corner:
 
 <div class="visualizationsWindow">
    <table>
