@@ -78,7 +78,7 @@ Additionally, `pygame` library is implemented in order to prevent any potential 
    ```
 4. Run the project:
    ```
-   python main.py
+   python main_window.py
    ```
    
 5. The **Introduction Window** will appear with showing a welcome message, an animated GIF, and a description of the project:
