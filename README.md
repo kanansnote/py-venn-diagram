@@ -1,4 +1,4 @@
-# Welcome to my Venn Diagram!
+# Welcome to My Venn Diagram!
 
 In this project, I'll try to create a solution by configuring this **diagram** for visualizing a career path with involving **MBTI Cognitive Functions**.
 
@@ -60,6 +60,8 @@ Additionally, `pygame` library is implemented in order to prevent any potential 
 - Python 3.x
 - PyQt5
 - Pygame
+- Matplotlib
+- Matplotlib_venn
 
 ## Usage
 
