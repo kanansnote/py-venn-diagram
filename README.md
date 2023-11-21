@@ -1,6 +1,6 @@
 # Welcome to My Venn Diagram!
 
-In this project, I'll try to create a solution by configuring this **diagram** for visualizing a career path with involving **MBTI Cognitive Functions**.
+Here I'm trying to visualize my career options with **three circles** that represent different **sets** and their **intersections**.
 
 The concept for this project was developed since ***January 2023***, and the programming part started in ***May 2023***. It's currently **under development and a work in progress**. 
 
