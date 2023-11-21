@@ -8,7 +8,7 @@ The concept for this project was developed since ***January 2023***, and the pro
 
 <img src="https://drive.google.com/uc?id=13WAcEf5QYzXnc5GwF26zYOI3BmL2MoGx" />
 
-Here **three circles** represents these following components:
+Here **three circles** represent these following components:
 
 - **Interests circle** demonstrates **artistic** and **philosophical** interests, emphasizing creativity and deep thinking.
 - **Skills circle** showcases **technical** skills alongside **nutritional** expertise, demonstrating a **multidisciplinary** approach.
