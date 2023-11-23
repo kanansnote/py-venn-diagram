@@ -2,7 +2,7 @@ QLabel {
     background-color: white;
 }
 
-QLabel#ImageLabel {
+QLabel#imageLabel {
     background-color: black;
 }
 

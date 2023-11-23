@@ -45,7 +45,7 @@ class IntroductionWindow(QtWidgets.QWidget):
         layout.addLayout(image_layout)
 
         image_label = QtWidgets.QLabel()
-        image_label.setObjectName('ImageLabel')
+        image_label.setObjectName('imageLabel')
         image_layout.addWidget(image_label)
 
         # Load the GIF image using QMovie
