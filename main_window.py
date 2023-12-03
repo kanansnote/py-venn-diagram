@@ -275,5 +275,8 @@ if __name__ == "__main__":
     with open("style.qss", "r") as f:
         app.setStyleSheet(f.read())
 
+    # Play the audio in start
+    play_audio()
+
     introduction_window.show()
     app.exec_()
