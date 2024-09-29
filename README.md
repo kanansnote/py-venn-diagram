@@ -40,7 +40,7 @@ Additionally, `pygame` library is implemented in order to prevent any potential 
 Introduction Window
 ![Introduction Window](./media/windows_introduction_window.gif)
 
-Click the `Start` button to proceed to the **Visualizations Window**. To exit the application, click the `Cancel` button.\
+Click the `Start` button to proceed to the **Visualizations Window**. To exit the application, click the `Cancel` button.
 
 5. In the **Visualizations Window**, you can explore the visualizations by the name of the current one on the left side corner:
 
