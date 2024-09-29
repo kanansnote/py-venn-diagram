@@ -1,23 +1,17 @@
 # Venn Diagram
 
-The concept for this project was developed since ***January 2023***, and the programming part started in ***May 2023***. 
-It's currently under development and a work in progress. 
+The concept for this project was developed since *January 2023*, and the programming part started in *May 2023*. It has been discontinued for several months, and there are no plans to resume work yet.
 
 ## Coding Solution
 
-I'm considering using ``Python``, due to its versatility and popularity in data visualization field. 
-The project consists of multiple code files, each serving a specific purpose:
+I'm considering using `Python`, due to its versatility and popularity in data visualization field. The project consists of multiple code files, each serving a specific purpose:
 
 - `main_window.py` is the main window implementation for the visualization project. It utilizes the `PyQt5` library for GUI development.
-- `all_three_circles.py` creates a visualization with three circles; 
-`interests_circle.py` represents artistic and philosophical interests, `skills_circle.py` technical and nutritional skills, 
-and `needs_circle.py` financial, health and communication needs.
+- `all_three_circles.py` creates a visualization with three circles; `interests_circle.py` represents artistic and philosophical interests, `skills_circle.py` technical and nutritional skills, and `needs_circle.py` financial, health and communication needs.
 
-Each code file includes functions that generate the respective visualizations using the `Matplotlib` library, 
-which are then rendered using `PyQt5` to display them as interactive widgets.
+Each code file includes functions that generate the respective visualizations using the `Matplotlib` library, which are then rendered using `PyQt5` to display them as interactive widgets.
 
-Additionally, `pygame` library is implemented in order to prevent any potential problems related 
-with audio playback upon clicking the "**speaker**" icon.
+Additionally, `pygame` library is implemented in order to prevent any potential problems related with audio playback upon clicking the "**speaker**" icon.
 
 ## Requirements
 
@@ -30,47 +24,28 @@ with audio playback upon clicking the "**speaker**" icon.
 ## Usage
 
 1. Clone the project repository to your IDE:
-   ```
-   git clone https://github.com/kanansnote/My-Venn-Diagram.git
-   ```
+
+   `git clone https://github.com/kanansnote/My-Venn-Diagram.git`
 
 2. Install the required dependencies. Ensure you have installed the libraries below:
-   ```
-   pip install pyqt5 pygame matplotlib matplotlib_venn
-   ```
-   
+
+   `pip install pyqt5 pygame matplotlib matplotlib_venn`
+
 3. Run the project:
-   ```
-   python main_window.py
-   ```
-   
+
+   `python main_window.py`
+
 4. The **Introduction Window** will appear with showing a welcome message, an animated GIF, and a description of the project:
 
-<div class="introductionWindow">
-   <table>
-      <tr>
-         <th>Introduction Window</th>
-      </tr>
-      <tr>
-         <td><img src="./media/windows_introduction_window.gif" alt="Introduction Window"></td>
-      </tr>
-   </table>
-</div>
+Introduction Window
+![Introduction Window](./media/windows_introduction_window.gif)
 
-Click the `Start` button to proceed to the **Visualizations Window**. To exit the application, click the `Cancel` button.
+Click the `Start` button to proceed to the **Visualizations Window**. To exit the application, click the `Cancel` button.\
 
 5. In the **Visualizations Window**, you can explore the visualizations by the name of the current one on the left side corner:
 
-<div class="visualizationsWindow">
-   <table>
-      <tr>
-         <th>Visualizations Window</th>
-      </tr>
-      <tr>
-         <td><img src="./media/windows_visualizations_window.gif" alt="Visualizations Window"></td>
-      </tr>
-   </table>
-</div>
+Visualizations Window
+![Visualizations Window](./media/windows_visualizations_window.gif)
 
 Click the `Next` and `Back` buttons in the status bar to implement the navigation process with all the visualizations.
 Click the `Finish` button to end the visualization any time by closing the application.
@@ -84,6 +59,7 @@ The project is licensed under the **GNU General Public License (GPL) version 3.0
 For more details, please refer to the [full text of the GPL](https://github.com/kanansnote/My-Venn-Diagram/blob/main/LICENSE).
 
 ## Additional Info
+
 <div class="additionalInfo">
    <table>
       <tr>
@@ -124,3 +100,5 @@ For more details, please refer to the [full text of the GPL](https://github.com/
       </tr>
    </table>
 </div>
+
+
