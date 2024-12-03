@@ -1,6 +1,6 @@
 # Venn Diagram
 
-The concept for this project was developed since *January 2023*, and the programming part started in *May 2023*. It has been discontinued for several months, and there are no plans to resume work yet.
+The concept for this project was developed since *January 2023*, and the programming part started in *May 2023*. It has been discontinued already, and there are no plans to resume the work. Feel free to use it for your own purposes.
 
 ## Coding Solution
 
